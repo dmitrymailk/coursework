@@ -1,0 +1,115 @@
+{
+  "title": "Adding a \u201cSplit the Bill\u201d Feature to Lieferando",
+  "data": [
+    {
+      "type": "sentence",
+      "content": "Imagine yourself on the sofa, your best friend to your right, your half-finished glass of wine to your left. It\u2019s late, it\u2019s Netflix time o\u2019clock, and you are starving. What better moment to order a good old Pizza Margherita online. You\u2019re ordering two pizzas and your friend\u2019s also wants a starter on top \u2014 both of you don\u2019t have cash, so you pay the whole thing via Paypal and your friend tells you he\u2019s paying you back asap. You\u2019re a bit short on money these days, so you reluctantly give him a nod. You know your friend \u2014 he will forget and you will have to run after your money. Meh."
+    },
+    {
+      "type": "sentence",
+      "content": "Anyone who can relate? Well, then this one might be interesting for you."
+    },
+    {
+      "type": "sentence",
+      "content": "For my latest project at my Ironhack UX/UI Design bootcamp I had the task to add a feature to the current Lieferando mobile app, that allows users to split the bill at the end of the checkout process. Boom, challenge accepted."
+    },
+    {
+      "type": "sentence",
+      "content": "As with every design thinking process, I started with looking into the business, the market, the competitors, and the users."
+    },
+    { "type": "subtitle", "content": "Business Analysis" },
+    {
+      "type": "sentence",
+      "content": "Lieferando is the biggest food delivery platform in Germany, and therefore market leader. The company was founded in 2009 in Berlin and in 2014 it was bought by Dutch company Takeaway.com. In the last few years some other companies joined the food delivery race, including Delivery Hero and Deliveroo\u2026 well, Delivery Hero was bought by Lieferando in 2019 and Deliveroo left the German market. So precisely, direct competition is non-existent."
+    },
+    {
+      "type": "sentence",
+      "content": "Lieferando cooperates with restaurants around German cities and acts as mediator between user and restaurant \u2014 with their own drivers. At this point more than 10000 businesses signed up on Lieferando and the company has more than half a million orders a month within Europe. Nomnomnom\u2026"
+    },
+    { "type": "subtitle", "content": "User Insights" },
+    {
+      "type": "sentence",
+      "content": "To understand the user of Lieferando better, I did desk research as well as user interviews with people that are using the Lieferando app frequently. Some of my main findings during this research are:"
+    },
+    {
+      "type": "sentence",
+      "content": "Based on my user interviews I discovered three main painpoints, which I summarised in the form of Jobs to be Done:"
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/3184/1*ohzO_kReJ-9QCU2lFz0wfg.png"
+    },
+    {
+      "type": "sentence",
+      "content": "It was quite interesting to see that users would really like to have an option to split the bill, but they would not like to delay the checkout process for example by having to type in various payment details, or waiting for others to authorise the payment before the order could go through."
+    },
+    {
+      "type": "sentence",
+      "content": "To empathise even more with the users and their frustrations, I created a persona:"
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/3288/1*acGwutSf8P78MN07EB9x8w.png"
+    },
+    {
+      "type": "sentence",
+      "content": "Now, based on all my research findings, my problem statement and approach to a solution could be summarised in the following way:"
+    },
+    {
+      "type": "sentence",
+      "content": "The feature solution described above involved the integration in the app in various places. During the checkout process, users have to select their payment method. At this point it makes sense to let the user opt for splitting the costs. In addition to that the account menu should have a new page listing contacts, so users can start saving contacts that they repeatedly order food with. This will speed up the checkout process even more. When a payment request is sent to a user this will happen directly via Paypal, but also within the Lieferando app \u2014 that\u2019s where the Inbox is coming into the game."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/3200/1*gEwnshcctMxQ6yhcJ-C6hw.png"
+    },
+    {
+      "type": "sentence",
+      "content": "I have indicated the above mentioned pages in the current sitemap (in orange). To start with, I have focused on the placement within the order process. The placement within the inbox and the development of a contact section would be added in future iterations."
+    },
+    {
+      "type": "sentence",
+      "content": "Keeping the current checkout flow in mind, I have developed a user flow that demonstrates how the new feature fits into the mobile app."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/3204/1*07bANmCmwbP9cZdaDtdsNw.png"
+    },
+    {
+      "type": "sentence",
+      "content": "The user flow starts on the home screen, which is simultaneously the list of available restaurants, and ends with the order confirmation after a successful checkout. The new feature is coming into action after the appearance of the \u201cYour Order\u201d page, when the user decides to split the bill, who to split it with and how to split it. Here he or she has two options \u2014 to split it equally or to select items per person. By confirming the order and receiving the order confirmation, a Paypal payment request is sent to the email (and/or saved contact) indicated in this process."
+    },
+    {
+      "type": "sentence",
+      "content": "After drawing some basic low-fi paper wireframes and testing them with a couple of users, I came up with my first prototype based on mid-fi wireframes."
+    },
+    {
+      "type": "sentence",
+      "content": "I did some usability testing with the mid-fi prototype and with the results I was able to build my high-fis. One of the major feedback I received from users was that when asked whether to split the costs an explanation would be needed about how this would work. Thus I added a little explanation blurb."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/5296/1*Bi3E5mEluUF8uby_emtlfw.png"
+    },
+    {
+      "type": "sentence",
+      "content": "Another iteration entailed the visibility of an inactive and active button at the \u201cSelect items per person\u201d screen as well as a note that all items have to be selected before the selection could be finished."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/5292/1*v4leWtgU47cuahmvnJ9FKw.png"
+    },
+    {
+      "type": "sentence",
+      "content": "This left me with my final prototype, which you can watch below:"
+    },
+    {
+      "type": "sentence",
+      "content": "This was a four day project, so obviously, the points on my \u201cWhat\u2019s next\u201d list is endless. To break it down, the most important next steps for me would be:"
+    },
+    {
+      "type": "sentence",
+      "content": "I must say this project was so much fun and so insightful as it was so close to a \u201creal-life\u201d case. Definitely going to look into more opportunities to develop new feature ideas for other widely used apps. But first\u2026 I\u2019ll order a pizza!"
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "title": "Rethinking Cancer: Could Microbial DNA in Your Blood Be a Sign of Cancer?",
+  "data": [
+    {
+      "type": "subtitle",
+      "content": "A new understanding of the way microbial populations shift with cancer could open a completely new therapeutic avenue."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/12000/0*baPK5Yl8xVKq9_LF"
+    },
+    {
+      "type": "sentence",
+      "content": "I am a radiation oncologist. Hardly a week goes by when I am not struck by how often individuals get a late stage diagnosis of cancer. Some have virtually no warning signs or symptoms. It is in this context that I came across a recent report opening the door to earlier detection of cancer, through finding microbial DNA in the bloodstream."
+    },
+    {
+      "type": "sentence",
+      "content": "We begin with a short backstory, turn to liquid biopsies, and end with how blood borne microbes may revolutionize cancer medicine."
+    },
+    { "type": "subtitle", "content": "Liquid biopsies" },
+    {
+      "type": "sentence",
+      "content": "Blood contains two types of cancer-derived materials that are susceptible to detailed molecular analysis: intact circulating tumor cells (CTCs) and cell-free circulating tumor DNA (cfDNA; also referred to as circulating tumor DNA, or ctDNA)."
+    },
+    {
+      "type": "sentence",
+      "content": "As tumors increase in volume, the capacity of phagocytes (a type of cell within the body capable of engulfing and absorbing bacteria and other small cells and particles) to eliminate and clear dead fragments can be exceeded, leading to a passive release of cfDNA into the bloodstream."
+    },
+    {
+      "type": "sentence",
+      "content": "Cancer doctors can use the blood drawn from a patient\u2019s arm to analyze DNA that tumors typically shed into the bloodstream. Depending on the tumor size and its blood supply, the amount of cfDNA released in the circulation can vary from 0.01% to 90% of all DNA present in plasma."
+    },
+    {
+      "type": "sentence",
+      "content": "Therefore, liquid biopsies can provide a non-invasive approach to profile a tumor without having to obtain tumor tissue. With such information, we may offer drugs that target particularly vulnerable spots in a cancer cell."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/2560/1*DuQ4pgLPP5WCfvUwBRArgw.jpeg"
+    },
+    {
+      "type": "sentence",
+      "content": "Liquid biopsies have many clinical applications, including:"
+    },
+    {
+      "type": "sentence",
+      "content": "The molecular analyses enabled by isolation of CTCs and cfDNA in liquid biopsies may be applied to guide various cancer management strategies at different events in the initial diagnosis and treatment of patients with cancer. Let\u2019s turn to today\u2019s topic, the interplay of blood microbes and cancer."
+    },
+    { "type": "subtitle", "content": "Blood microbes and cancer" },
+    {
+      "type": "sentence",
+      "content": "Researcher Gregory Poore, an MD/PhD student at University of California San Diego School of Medicine knew that cancer is a disease of the human genome \u2014 mutations in our genes allow cells to avoid death, proliferate and to form tumors. He discovered a 2017 study in Science that showed how microbes invaded a majority of pancreatic cancers and were able to break down the main chemotherapy drug given to these patients. He became intrigued by the idea that bacteria and viruses might play a bigger role in cancer than anyone had previously considered."
+    },
+    {
+      "type": "sentence",
+      "content": "Working in the lab of Rob Knight, PhD, professor and director of the Center for Microbiome Innovation, Poore and colleagues did this:"
+    },
+    {
+      "type": "sentence",
+      "content": "Historically, we have generally assumed that tumors are sterile environments, and ignored the complex interplay human cancer cells may have with the bacteria, viruses and other microbes that live in and on our bodies. To the researchers, this is an area ripe for investigation, given the number of microbial genes in our bodies vastly outnumbers the number of human genes."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/16040/0*dzRzAQ2l137-8IrE"
+    },
+    { "type": "subtitle", "content": "Cancer-associated microbial patterns" },
+    {
+      "type": "sentence",
+      "content": "The researchers first looked at microbial data available from The Cancer Genome Atlas, a database of the US National Cancer Institute (NCI) containing genomic and other information from thousands of patient tumors. To the team\u2019s knowledge, it was the largest effort ever undertaken to identify microbial DNA in human sequencing data."
+    },
+    {
+      "type": "sentence",
+      "content": "From 18,116 tumor samples, representing 10,481 patients with 33 different cancer types, emerged distinct microbial signatures, or patterns, associated with specific cancer types. Some were expected, such as the association between human papillomavirus (HPV) and cervical, head and neck cancers, and the association between Fusobacterium species and gastrointestinal cancers. But the team also identified previously unknown microbial signatures that strongly discriminated between cancer types. For example, the presence of Faecalibacterium species distinguished colon cancer from other cancers."
+    },
+    {
+      "type": "sentence",
+      "content": "Armed with the microbiome profiles of thousands of cancer samples, the researchers then trained and tested hundreds of machine learning models to associate certain microbial patterns with the presence of specific cancers. The machine learning models were able to identify a patient\u2019s cancer type using only the microbial data from his or her blood."
+    },
+    {
+      "type": "sentence",
+      "content": "The researchers then removed more advanced cancers from the dataset and found that many cancer types were still distinguishable at earlier stages when relying solely on blood-derived microbial data. The results held up even when the team performed the most stringent bioinformatics decontamination on the samples, which removed more than 90 percent of the microbial data."
+    },
+    { "type": "subtitle", "content": "But does it work in the real world?" },
+    {
+      "type": "sentence",
+      "content": "To determine if these microbial patterns could be useful in the real world, Knight, Poore and team analyzed blood-derived plasma samples from 59 consenting patients with prostate cancer, 25 with lung cancer and 16 with melanoma, provided by collaborators at Moores Cancer Center at UC San Diego Health."
+    },
+    {
+      "type": "sentence",
+      "content": "Employing new tools they developed to minimize contamination, the researchers developed a readout of microbial signatures for each cancer patient sample and compared them to each other and to plasma samples from 69 healthy, HIV-negative volunteers."
+    },
+    {
+      "type": "sentence",
+      "content": "\u201cThe ability, in a single tube of blood, to have a comprehensive profile of the tumor\u2019s DNA (nature) as well as the DNA of the patient\u2019s microbiota (nurture), so to speak, is an important step forward in better understanding host-environment interactions in cancer,\u201d said co-author Sandip Pravin Patel, MD, a medical oncologist and co-leader of experimental therapeutics at Moores Cancer Center at UC San Diego Health."
+    },
+    {
+      "type": "sentence",
+      "content": "\u201cWith this approach, there is the potential to monitor these changes over time, not only as a diagnostic, but for long-term therapeutic monitoring. This could have major implications for the care of cancer patients, and in the early detection of cancer, if these results continue to hold up in further testing.\u201d"
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/24000/0*6L7hYo883NIk_PAR"
+    },
+    {
+      "type": "subtitle",
+      "content": "Comparison to current cancer diagnostics"
+    },
+    {
+      "type": "sentence",
+      "content": "With approaches such as these, we can continue to developthe discipline of so-called liquid biopsies. Today, we generally need a physical sample of a suspected cancer, with the tissue removed by a biopsy or surgically. More recently, we oncologists have begun to use liquid biopsies; here the diagnosis may be rendered via a simple blood draw."
+    },
+    {
+      "type": "sentence",
+      "content": "Then technologies are employed to detect cancer-specific human gene mutations in circulating DNA shed by tumors. This approach can already be used to monitor progression of tumors for some types of already-diagnosed cancers, but is not yet approved by the U.S. Food and Drug Administration (FDA) for diagnostic use."
+    },
+    {
+      "type": "sentence",
+      "content": "To be frank, we have work to do before liquid biopsies become a routine means to reliably distinguish normal genetic variation from true early cancer. What we don\u2019t want are false negatives, for example when the cancer volume is low."
+    },
+    {
+      "type": "sentence",
+      "content": "According to the researchers, one advantage of cancer detection based on microbial DNA, compared to circulating human tumor DNA, is its diversity among different body sites. Human DNA, in contrast, is essentially the same throughout the body."
+    },
+    {
+      "type": "sentence",
+      "content": "Once we can find the cancer early, does this mean immediate treatment is needed? Would some of the spontaneously resolve, or be dealt with by your immune system? More screening is not always the answer. In addition, if the microbial readout suggests cancer, one would still need additional tests to confirm the diagnosis, identify the primary source, and determine the stage (extent) of cancer."
+    },
+    {
+      "type": "sentence",
+      "content": "While the research results will need to be validated in a large, diverse population. Investigators will need to determine what a \u201chealthy\u201d blood-based microbial readout might look like, too."
+    },
+    {
+      "type": "sentence",
+      "content": "To advance blood-based microbial DNA readouts through the next steps toward regulatory approval, commercialization and clinical application of a diagnostic test, Knight and Poore have filed patent applications and they founded a spinout company called Micronoma."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/8616/0*PgZ5zKuNo9FpACxP"
+    },
+    {
+      "type": "sentence",
+      "content": "Could the latest study prompt a paradigm shift in the field of cancer biology? Can we target the microbes as a treatment for cancer? Welcome to the world of the newly discovered cancer-associated blood microbiome."
+    },
+    { "type": "sentence", "content": "I\u2019m Dr. Michael Hunter." },
+    { "type": "sentence", "content": "References" }
+  ],
+  "topic": "science"
+}

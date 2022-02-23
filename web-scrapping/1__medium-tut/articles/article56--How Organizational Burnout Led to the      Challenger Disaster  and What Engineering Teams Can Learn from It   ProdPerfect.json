@@ -1,0 +1,120 @@
+{
+  "title": "How Organizational Burnout Led to the 1986 Challenger Disaster, and What Engineering Teams Can Learn from It \u2014 ProdPerfect",
+  "data": [
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/2400/1*uY-5LDtQAgOPJT7QU1LKhw.jpeg"
+    },
+    {
+      "type": "sentence",
+      "content": "Imagine the morning of January 28, 1986. You are sitting in mission control, tensely and helplessly watching as the Challenger space shuttle begins its lift-off from Florida\u2019s Kennedy Space Center. Just 73 seconds after takeoff, at an altitude of about 46,000 feet, the shuttle is engulfed in a cloud of fire. You watch in terror as the orbiter is torn apart, falling out of the sky into the Atlantic Ocean below, killing all seven astronauts on board."
+    },
+    {
+      "type": "sentence",
+      "content": "The Moment of Launch: Software and Space"
+    },
+    {
+      "type": "sentence",
+      "content": "Space is inherently dangerous. Space travel operates at every known extreme of human engineering and endurance. Software development is far tamer, and the rules are gentler by the same degree. In launching a shuttle, a team only has one shot (and though stakes were lower, the same was true of software launches before advanced web development). In deploying a web application, a team now has opportunities for continuous improvement, even after launch."
+    },
+    {
+      "type": "sentence",
+      "content": "The pressure on web software is far lower, but the nature of the operation has real parallels. NASA is an engineering organization first, with a mission. Like NASA, great software organizations have a mission, and humans who work passionately to realize it. Like mission control supporting the Challenger and every other shuttle launch, all of that engineering effort and quality testing culminates in the moment of launch: when we set our products into the world to face all the forces of chaos-users, networks, and cyber attacks-therein."
+    },
+    {
+      "type": "sentence",
+      "content": "Software failures tend to be far less dramatic than the disintegration of the Challenger, but Dan (my CEO) and I are acutely aware of the tremendous impact software engineering has on the well-being of mankind. The stakes tend not to be as immediately grave as with the launch of a space shuttle, but a software team\u2019s success or failure-and the trend towards success or failure in the industry-have real impact on the lives of billions of people: their health, their jobs, their safety, their mobility, their happiness. As software continues to \u201c eat the world ,\u201d the stakes keep going up."
+    },
+    {
+      "type": "sentence",
+      "content": "The tragedy of the Challenger compels us to bear the weight of our own duty as engineers to society at large: to beware the road towards the organizational breakdown that allowed the crew of the Challenger to be lost and the breakdowns that cause world-changing products to end up in the dust bin. Here, we examine how NASA failed in its mission to safely launch humans into space, how organizational burnout led to the 1986 Challenger disaster, and where engineering organizations today can find these signs of burnout before they lead to disaster."
+    },
+    {
+      "type": "sentence",
+      "content": "Organizational Burnout: What Went Wrong"
+    },
+    {
+      "type": "sentence",
+      "content": "In the wake of the Challenger disaster, investigations found that the shuttle launch failed due to a faulty o-ring: an elastomer loop designed to seal joints between sections of the rocket booster to prevent leaks from the fuel tank. Cold temperatures that morning made the o-ring brittle and caused it to fail under high pressures during liftoff. Hot gas, escaping through the leak in the o-ring, pierced the fuel tank and ignited it."
+    },
+    {
+      "type": "sentence",
+      "content": "Later, findings from the Rogers Commission revealed that this tragedy could have been prevented: multiple failures of organizational checks led this critical flaw to not only remain in the shuttle, but to be unmitigated by procedure. Many NASA engineers and managers had been aware since 1977 (nine years before Challenger) that the o-rings had a potentially catastrophic flaw. Despite the concerns of frontline engineers who predicted a \u201c catastrophe of the highest order \u201c and requested to delay the launch, management at both NASA and its contractor decided to move forward. The Rogers Commission concluded that the Challenger failure was rooted in a deeper cultural failure within NASA, plagued by flawed decision-making , faulty communication, and a lack of internal checks and balances."
+    },
+    {
+      "type": "sentence",
+      "content": "In short: plenty of people knew about this problem and either chose to do nothing about it, or were rebuffed by the organization\u2019s inertia when they tried. Return to that chilly morning of January 28th in mission control. Imagine that you were one of the engineers who pled for a delay or one of the managers that, through incentives and external pressure, chose to launch anyway. Before you keep reading, think about whether you\u2019ve ever been in a similar situation in your own organization."
+    },
+    {
+      "type": "sentence",
+      "content": "Organizational burnout occurs as a result of upstream failures to inspire employee motivation and flourishing in the workplace. This includes implementing processes that uphold individual and collective greatness, purpose, reward, and problem solving through upholding values such as enthusiasm, impact, ownership, transparency, and humility. Flourishing organizations are nimble and reactive; burnt-out organizations operate largely by inertia alone. It is clear in retrospect that by the mid 1980s, NASA had begun to suffer from organizational burnout. Laconic and inefficient forces drove leaders to lose sight of the mission to safely deploy humans into space, as well as fail to reinforce values that supported this mission."
+    },
+    { "type": "sentence", "content": "Valuing Greatness: Enthusiasm" },
+    {
+      "type": "sentence",
+      "content": "NASA\u2019s organizational burnout is such a powerful story because as an organization it saw both extremes of this spectrum between burnout and flourishing. The NASA of the Apollo program (1961\u20131975) stands in stark contrast to the NASA that allowed Challenger to launch with a faulty o-ring. What made this program truly great was not how well its participants were paid nor how intelligent they were, but how much they believed in the program itself. You did not need to beat market salaries to bring people into the Apollo program. National enthusiasm for space was at an all-time high. John F. Kennedy\u2019s 1862 moonshot speech reflected this sentiment: \u201c We choose to go to the moon in this decade\u2026because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one which we intend to win .\u201d This moon landing was the single most inspiring, world-uniting event in human history. In this form of NASA, people who worked at every level of the organization were intrinsically and extrinsically motivated to succeed in their mission. Concerns from front-line engineers were carefully evaluated and responded to; problems were solved through rapid iteration, testing, failure, and learning before launch. In this organization, failure was not an option, so they did not fail."
+    },
+    {
+      "type": "sentence",
+      "content": "At the time of NASA\u2019s Challenger, the U.S. had already won the space race to the moon. Americans\u2019 enthusiasm for manned space flights had waned, and there was a drastic decline in public awe and wonder about space. The shuttle program could no longer inspire the same enthusiasm from national leaders and had largely stopped innovating. This created a feedback loop in which the program received less funding and fewer recruits who shared an enthusiasm for the US\u2019s mission in space. NASA was under pressure to keep its budget low and its operations highly predictable. Delays were frowned upon, and cost overruns were scrutinized more than safety and mission success. The values that had made NASA great had faded."
+    },
+    { "type": "sentence", "content": "Valuing Purpose: Impact" },
+    {
+      "type": "sentence",
+      "content": "A lack of clear mission alignment in burnt out organizations leads to a decreased sense of individuals\u2019 potential for impact. You may know organizations in which it seems people care less about maximizing their impact and more about survival: simply collecting a paycheck. When employees don\u2019t believe the organizational mission is worthy of their effort, creative energy, and personal risk, they no longer go out of their way to fight for their impact on the mission. We can imagine that if someone were sufficiently convicted about the mission of the Challenger , they would have been willing to risk their career and even circumvent management in order to share their concerns and ensure the safety of their colleagues."
+    },
+    { "type": "sentence", "content": "Valuing Reward: Ownership" },
+    {
+      "type": "sentence",
+      "content": "You may know the classic experiment of the rat in a maze with cheese: after repeatedly navigating the maze, the rat learns that the cheese lies on the same path and seeks it repeatedly. When it\u2019s clear that alternative paths offer no reward (or provide punishment), the mammal brain sticks to what works. When our organizations reinforce that there is only one path to reward, we will respond in the same way. In burnt out organizations, leaders often fail to create a cycle of accountability and reward with employees, neither negatively reinforcing silence nor positively reinforcing raising voices. At NASA, this lack of ownership led even those with life-saving insight to eventually settle into the trodden path of keeping their heads down, doing their job, and not making too much fuss. This is where over-reliance on policy stifles ownership: the stricter a policy is built, the less room remains for individual initiative."
+    },
+    {
+      "type": "sentence",
+      "content": "Valuing Problem-Solving: Transparency and Humility"
+    },
+    {
+      "type": "sentence",
+      "content": "NASA\u2019s failure in the Challenger mission also reflected a failure in the organization\u2019s transparency about its challenges and financial needs with the public. This was in part because by the 1980s, the lack of clarity in NASA\u2019s overall mission meant that public support for funding had dropped, and NASA had to keep its head down. The idea of space travel had simply become blas\u00e9. During the Apollo era, the mission was evident to both the organization and U.S. taxpayers. Whereas almost 100% of Americans watched the Apollo launch live, only 15% witnessed the Challenger disaster. This lack of national enthusiasm discouraged NASA from sharing any bad news with Congress for fear of being attacked by budget hawks as being bad stewards of taxpayer dollars."
+    },
+    {
+      "type": "sentence",
+      "content": "Not only did NASA leadership fail in communicating issues with the public, they failed to demonstrate the humility to receive internal feedback from the front lines of their own organization. They had little incentive to go out of their way to create processes and devote resources to prioritizing internal concerns. Instead of building direct lines of feedback between those with on-the-ground insight and decision-makers at the top, they allowed bureaucratic practices to create major roadblocks to transparency. Those roadblocks, built unintentionally over time, were effective in keeping bad news from causing a ruckus in Congress, but they also kept real crises from being elevated and prioritized."
+    },
+    {
+      "type": "sentence",
+      "content": "What\u2019s Next?: Software Organizations Today"
+    },
+    {
+      "type": "sentence",
+      "content": "The symptoms of burnout we saw in NASA in the 1980s are likely very familiar to most of our readers here. Organizations burn out slowly, over time, for similar reasons: the human spirit that first inspired an organization\u2019s moonshot wanes when the mission becomes fuzzy, when failure becomes acceptable, and when pressure to become \u201clean\u201d and predictable outweighs the spark to innovate and iterate."
+    },
+    {
+      "type": "sentence",
+      "content": "Though all engineering organizations are vulnerable to burnout, we are not doomed to it. Some leaders excel at refreshing and reinforcing inspirational missions and values among their people. They challenge and reward employees for caring about the mission, mitigating risks that prevent companies from delivering value to customers and upholding product quality through launch. These leaders create systems of accountability and reward that drive this mission forward at every level, so that when people see something that risks quality, they take action. They inspire enthusiasm and reward transparency when problems arise. Unlike NASA, they paint a picture of a clear, new, seemingly impossible target after the once-incredible moonshot has become mundane."
+    },
+    {
+      "type": "sentence",
+      "content": "From Organizational Burnout to Organizational Excellence"
+    },
+    {
+      "type": "sentence",
+      "content": "Great engineering leaders rely on data to tell them where to iterate, where to innovate, where to delay launch, where to fix problems. Great software teams use test automation, application performance monitoring, canary builds, user feedback, and many other signals to tell them where to find risks and opportunities. They constantly proceduralize and celebrate the actions that respond effectively to those signals. Maintaining a culture of excellence requires constant effort. Burnout is like entropy, and it wins out in time if new energy is not brought into a system."
+    },
+    {
+      "type": "sentence",
+      "content": "If you are on the front lines of a profoundly burnt out organization, perhaps you have tried and failed to make sustainable change. Remember that it doesn\u2019t have to be this way, and that you may simply need to change organizations. If you are on the front lines of an organization that is starting to show signs of burnout, consider having a serious conversation with the highest-level leader you have access to. Help them understand the systemic risks they\u2019re introducing by abiding by the status quo. Show them this article."
+    },
+    {
+      "type": "sentence",
+      "content": "Regardless of the state of your organization, if you are a leader, you are responsible for taking action. Get started by reading resources on organizational change including Leading Change, by John P. Cotter and Turn the Ship Around! by David Marquet. Finally, remember that transforming burnout into excellence is a tremendously difficult and lengthy journey. You must decide whether you care enough about the mission and its turnaround to do the work of creating processes that reward what is right and correct what is wrong."
+    },
+    {
+      "type": "sentence",
+      "content": "Instilling an organization with strong values and reinforcing them through effective processes transforms individuals at all levels. It inspires employees to explore alternatives and surface concerns on the frontline. And it inspires leadership to prioritize sensitive response and forward-thinking change. Of course, we will make mistakes. But we can commit to remaining teachable, sharing responsibility, and caring for the mission we are building towards together."
+    },
+    {
+      "type": "sentence",
+      "content": "Originally published at https://prodperfect.com on March 11, 2020."
+    }
+  ]
+}

@@ -1,0 +1,655 @@
+{
+  "title": "Binary Classification Example",
+  "data": [
+    { "type": "subtitle", "content": "Predicting Opioid Use" },
+    {
+      "type": "sentence",
+      "content": "This global crisis has impacted all of our lives in one way or another but this is a perfect opportunity to hone your craft. I happened to renew my Coursera account specifically trying my hand at network analysis. Cryptocurrency/blockchain medium articles have become part of my daily routine. Finally, I wanted to post an ML classification example to help those looking for a detailed \u2018Beginning to End\u2019 use case and call for constructive feedback from the community at large. This journey will be long and detailed, I hope you are ready for the ride."
+    },
+    {
+      "type": "sentence",
+      "content": "We will utilize an insurance dataset which outlines a series of patient centered features with the ultimate goal to correctly predict whether or not opioid abuse has occurred."
+    },
+    { "type": "subtitle", "content": "Feature Definitions" },
+    {
+      "type": "sentence",
+      "content": "ClaimID Unique: Identifier for a claimAccident DateID: Number of days since the accident occurred from an arbitrary dateClaim Setup DateID: Number of days since the Resolution Manager sets up the claim from an arbitrary dateReport To DateID: Number of days since the employer notifies insurance of a claim from an arbitrary dateEmployer Notification DateID: Number of days since the claimant notifies employer of an injury from an arbitrary dateBenefits State: The jurisdiction whose benefits are applied to a claimAccident State: State in which the accident occurredIndustry ID: Broad industry classification categoriesClaimant Age: Age of the injured worker Claimant Sex: Sex of the injured worker Claimant State: State in which the claimant residesClaimant Marital Status: Marital status of the injured worker Number Dependents: Number of dependents the claimant hasWeekly Wage: An average of the claimant\u2019s weekly wages as of the injury date.Employment Status Flag: F \u2014 Regular full-time employee P \u2014 Part-time employee U \u2014 Unemployed S \u2014 On strike D \u2014 Disabled R \u2014 Retired O \u2014 Other L \u2014 Seasonal worker V \u2014 Volunteer worker A \u2014 Apprenticeship full-time B \u2014 Apprenticeship part-time C \u2014 Piece workerRTW Restriction Flag: A Y/N flag, used to indicate whether the employees responsibilities upon returning to work were limited as a result of his/her illness or injury.Max Medical Improvement DateID: DateID of Maximum Medical Improvement, after which further recovery from or lasting improvements to an injury or disease can no longer be anticipated based on reasonable medical probability.Percent Impairment: Indicates the percentage of anatomic or functional abnormality or loss, for the body as a whole, which resulted from the injury and exists after the date of maximum medical improvementPost Injury Weekly Wage: The weekly wage of the claimant after returning to work, post-injury, and/or the claim is closed.NCCI Job Code: A code that is established to identify and categorize jobs for workers\u2019 compensation.Surgery Flag: Indicates if the claimant\u2019s injury will require or did require surgeryDisability Status: \u2014 Temporary Total Disability (TTD) \u2014 Temporary Partial Disability (TPD) \u2014 Permanent Partial Disability (PPD) \u2014 Permanent Total Disability (PTD)SIC Group: Standard Industry Classification group for the clientNCCI BINatureOfLossDescription: Description of the end result of the bodily injury (BI) loss occurrenceAccident Source Code: A code identifying the object or source which inflicted the injury or damage.Accident Type Group: A code identifying the general action which occurred resulting in the lossNeurology Payment Flag: Indicates if there were any payments made for diagnosis and treatment of disorders of the nervous system without surgical interventionNeurosurgery Payment Flag: Indicates if there were any payments made for services by physicians specializing in the diagnosis and treatment of disorders of the nervous system, including surgical intervention if neededDentist Payment Flag: Indicates if there were any payments made for prevention, diagnosis, and treatment of diseases of the teeth and gumsOrthopedic Surgery Payment Flag: Indicates if there were any payments made for surgery dealing with the skeletal system and preservation and restoration of its articulations and structures.Psychiatry Payment Flag: Indicates if there were any payments made for treatment of mental, emotional, or behavioral disorders.Hand Surgery Payment Flag: Indicates if there were any payments made for surgery only addressing one or both hands.Optometrist Payment Flag: Indicates if there were any payments made to specialists who examine the eye for defects and faults of refraction and prescribe correctional lenses or exercises but not drugs or surgeryPodiatry Payment Flag: Indicates if there were any payments made for services from a specialist concerned with the care of the foot, including its anatomy, medical and surgical treatment, and its diseases.HCPCS A Codes \u2014 HCPCS Z Codes: Count of the number of HCPCS codes that appear on the claim within each respective code groupICD Group 1 \u2014 ICD Group 21: Count of the number of ICD codes that appear on the claim w/in each respective code groupCount of the number of codes on the claim \u2014 CPT Category \u2014 Anesthesia \u2014 CPT Category \u2014 Eval_Mgmt \u2014 CPT Category \u2014 Medicine \u2014 CPT Category \u2014 Path_Lab \u2014 CPT Category \u2014 Radiology \u2014 CPT Category \u2014 SurgeryCount of the number of NDC codes on the claim within each respective code class \u2014 NDC Class \u2014 Benzo \u2014 NDC Class \u2014 Misc (Zolpidem) \u2014 NDC Class \u2014 Muscle Relaxants \u2014 NDC Class \u2014 StimulantsOpioids Used: A True (1) or False (0) indicator for whether or not the claimant abused an opioid"
+    },
+    { "type": "subtitle", "content": "1. Exploratory Data Analysis" },
+    {
+      "type": "sentence",
+      "content": "Let us begin with importing all the required libraries along with our dataset."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1866/1*SRf0pN1D2P6u9VsnR2aW8g.png"
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1006/1*Bn3jotVJoJnwWY_i4Q8igg.png"
+    },
+    {
+      "type": "sentence",
+      "content": "Our dataset contains just over 16,000 observations along with 92 features including the target (ie. Opiods Used). We also have a variety of feature types including integers, floats, strings, booleans and mixed type."
+    },
+    { "type": "subtitle", "content": "Deletion of Initial Features" },
+    {
+      "type": "sentence",
+      "content": "Before we tackle missing data, outliers, cardinality, let\u2019s see if we can quickly delete any features to simplify out further analysis."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/744/1*rxFR2Xt47hRW78Xmmj0sZw.png"
+    },
+    {
+      "type": "sentence",
+      "content": "As we scroll through the output we can see the number of unique values for each feature along with the total length of the entire dataset. Features which have a similar number of unique values as the total length of the dataframe can be removed as they don\u2019t provide much predictive ability. \u2018ClaimID\u2019 is the only feature which meet this criteria and can be removed."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1864/1*Ds9_brJuc6xYcY2gg4gZpw.png"
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/588/1*A-szG_YG5hSo4LbOezAABA.png"
+    },
+    {
+      "type": "sentence",
+      "content": "Next, we can examine the correlations between our numerical features and delete features which are very highly correlated. It is up to you to determine what is considered \u201chighly correlated\u201d but in this case we will select a correlation of 90 and above. Notice in the code we have constructed a correlation matrix and converted the correlations to their absolute values in order to deal with negative correlations. \u2018Claim Setup DateID\u2019, \u2018Report to DateID\u2019, \u2018Employer Notification DateID\u2019 and \u2018Max Medical Improvement DateID\u2019 can be removed."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1048/1*gsP5dQy7-YEi4KCilGZShA.png"
+    },
+    {
+      "type": "sentence",
+      "content": "We can examine the percentage of missing values for the remaining features and remove any features with an excessive missing data. One feature \u2018Accident Source Code\u2019 has over 50% of missing values but that\u2019s not enough to warrant deletion."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/700/1*9xm2ZBaJWE2Oz3vwJEVHoA.png"
+    },
+    {
+      "type": "sentence",
+      "content": "Examining \u2018Claimant State\u2019, \u2018Accident State\u2019 and \u2018Benefits State\u2019 we find that the vast majority of the values are the same. We will keep \u2018Benefits State\u2019 as it contains the least amount of missing values."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1552/1*CF4QE62NlheWqpJh8ylReQ.png"
+    },
+    {
+      "type": "sentence",
+      "content": "When we examine the unique values for each feature we can start to see some discrepancies which require our attention. First, we notice blank or null values which have not been converted to Np.nan. Next, we are seeing the value of \u2018X\u2019 for many features and this seems like a recording discrepancy where the individual recording the data recorded missing values with an \u2018X\u2019. Finally, the feature named \u2018Accident Type Group\u2019 is what we call a mixed-type which because it contains both string and numerical values. Let\u2019s separate the string and numerical values into their own features and delete the original \u2018Accident Type Group\u2019 feature."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/826/1*FqA290_SfxIj3LgXeL89Ng.png"
+    },
+    {
+      "type": "sentence",
+      "content": "Let\u2019s now turn our attention to cardinality or the number of unique values/categories for each feature. Continuous feature such as \u2018Weekly Wage\u2019 will no doubt have hundreds or even thousands of unique categories. Nominal and discrete features (ie. gender and number of dependents) will have a much smaller number of categories. The goal of this exercise is to determine if any categories hold the majority (90%+) of the values. If a feature contains one or two categories which hold 90%+ of the values there simply isn\u2019t enough variability in the data to retain the feature. It is ultimately up to you to determine the cut off but we feel 90% or more is a safe assumption."
+    },
+    { "type": "subtitle", "content": "2. Feature Characteristics" },
+    {
+      "type": "sentence",
+      "content": "Now that we have successfully eliminated many of the features due to high correlations, duplicate values and lack of variability we can focus on examining feature characteristics and deciding how to tackle each problem."
+    },
+    {
+      "type": "sentence",
+      "content": "You will notice that in this section we are simply identifying the issue and making a mental note. We wouldn\u2019t be actually applying the discussed changes towards the end of the notebook into a feature engineering pipeline."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1280/1*PnIKSpdvVOSvkg-N5eOEhw.png"
+    },
+    { "type": "subtitle", "content": "Missing Values" },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/612/1*DeWX69xWFA5BozbXwSFJag.png"
+    },
+    {
+      "type": "sentence",
+      "content": "From our previous look at missing values, we discovered that only one feature contained more than 50% of missing values and the vast majority did not contain any missing data. That said, we do have a number of features which do contain missing data and we need to determine how we will deal with this issue as many ML algorithms require full clean datasets. This is an extensive topic and we do not wish to cover the intricacies in this blog but the reader should get well acquainted with this topic. First, one must orient oneself with the various types of missing data such as \u2018Missing Completely at Random\u2019, \u2018Missing at Random\u2019 and \u2018Missing not at Random\u2019. These topics help to pinpoint how and when you should deal with your missing data. Additionally, a further reading into imputation techniques such as Mean/Median/Mode, Arbitrary Value Imputation, Adding Missing Data Indicator, Random Sample Imputation, ML imputation, etc. will provide a great overview."
+    },
+    {
+      "type": "sentence",
+      "content": "We have 9 features with missing data. For features with less than 5% of missing values (ie. Claimant Sex, Claimant Marital Status, Employment Status Flag, RTW Restriction Flag) we will replace the missing values with the mode of their distributions. Due to their low percentage of missing values a mode imputation wouldn\u2019t change the distribution by very much. \u2018Accident DateID\u2019 is our only continuous feature with missing data and we\u2019ll impute missing values with an arbitrary number of -99999. All other features are categorical in nature and since they have more than 5% of missing values we\u2019ll impute the missing values with the string \u2018missing\u2019. This ultimately wouldn\u2019t change the distribution and only add a new category to the distribution."
+    },
+    {
+      "type": "sentence",
+      "content": "Accident DateID: continuous w/ -99999Claimant Sex: categorical w/modeClaimant Marital Status: categorical w/modeEmployment Status Flag: categorical w/modeRTW Restriction Flag: categorical w/modeDisability Status: categorical w/\u2019missing\u2019NCCI BINatureOfLossDescription: categorical w/\u2019missing\u2019Accident Source Code: categorical w/\u2019missing\u2019Accident Type Group num: categorical w/\u2019missing\u2019"
+    },
+    {
+      "type": "subtitle",
+      "content": "Cardinality of Categorical and Discrete Features"
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/946/1*7Y7uB-lWtPRag9M1kL0Qog.png"
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/918/1*KS4mGeXhpQgnlTwLcFskew.png"
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/790/1*dVHurtfo9SRPQANyOFiUmA.png"
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/676/1*0bs_5SvRnnom6v_VZFCUrA.png"
+    },
+    {
+      "type": "sentence",
+      "content": "In the previous section, we looked at cardinality in order to remove features with low variability (ie. features with categories which contained the majority of the data). We need to examine cardinality a bit deeper and identify \u2018rare\u2019 categories. In other words, which categories contain only a very small percentage of the data (=<1%). We will aggregate all the categories into a \u2018rare\u2019 category thereby, reducing the cardinality of each feature and simplifying the model. This method will be very helpful when we discuss encoding categorical and discrete features."
+    },
+    {
+      "type": "sentence",
+      "content": "As an example, the feature \u2018Employment Status Flag\u2019 currently has 13 categories (including np.nan) but as you can see the \u201cF = Full-Time\u201d and \u201cP=Part-Time\u201d categories make up almost 96% of the data. All other categories barely show up 0.5% of the time and they will all be aggregated as \u2018rare\u2019 categories. Any categorical or discrete feature with categories occurring less than 1% of the time will have those categories encoded as \u2018rare\u2019."
+    },
+    { "type": "subtitle", "content": "Distributions and Outliers" },
+    {
+      "type": "sentence",
+      "content": "The dataset only contains two continuous features \u2018Accident DateID\u2019 and \u2018Weekly Wage\u2019. We need to determine whether nor not these features contain skewed distributions and if they contain any outliers."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1276/1*9Uk-9_u-HDdZBWJug-KpYA.png"
+    },
+    {
+      "type": "sentence",
+      "content": "Both features certainly maintain skewed distributions but only \u2018Weekly Wage\u2019 contains any outliers. ML algorithms have certain assumptions about the data which we need to follow in other to increase their predictive ability. For example, linear regression assumes the relationship between your predictors and target is linear (linearity). It also assumes there are no outliers in the data. It has a particularly difficult time with highly correlated features (multicollinearity). Finally, it assumes your features are normally distributed."
+    },
+    {
+      "type": "sentence",
+      "content": "Normally distributed features follow a Gaussian distribution which you probably remember from your high school statistics course resembles a bell shape. As you can see neither \u2018Accident DateID\u2019 nor \u2018Weekly Wage\u2019 are normally distributed. There are several commonly used methods to fix skewed distributions such as log, reciprocal, square root, box-cox and yeo-johnson transformations."
+    },
+    {
+      "type": "sentence",
+      "content": "The corrected skews of \u2018Accident DateID\u2019 are as follows:"
+    },
+    { "type": "sentence", "content": "Accident DateID: 0.137" },
+    { "type": "sentence", "content": "Accident DateID_log: 0.111" },
+    { "type": "sentence", "content": "Accident DateID_rec: 0.00" },
+    { "type": "sentence", "content": "Accident DateID_sqrt: 0.124" },
+    {
+      "type": "sentence",
+      "content": "We can see the initial skew of \u2018Accident DateID\u2019 was 0.137 which technically speaking isn\u2019t very skewed as a normal distribution has a skew of zero (0). That said, applying the reciprocal transformation adjusted our skew to zero (0)."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1942/1*pKJkYvPzeXWUkv5AGLMhTQ.png"
+    },
+    {
+      "type": "sentence",
+      "content": "The corrected skews of \u2018Weekly Wage\u2019 are as follows:"
+    },
+    { "type": "sentence", "content": "Weekly Wage: 2.57" },
+    { "type": "sentence", "content": "Weekly Wage_log: -3.74" },
+    { "type": "sentence", "content": "Weekly Wage_rec: 54.37" },
+    { "type": "sentence", "content": "Weekly Wage_sqrt: 0.407" },
+    {
+      "type": "sentence",
+      "content": "\u2018Weekly Wage\u2019 had a much larger initial skew at 2.56 but a square root transformation brought the skew down significantly (0.40)."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1872/1*Js9eKPPud2XJMgGzPZRAYg.png"
+    },
+    {
+      "type": "sentence",
+      "content": "Now that we have fixed the skewness, let\u2019s address the outliers located inside \u2018Weekly Wage_sqrt\u2019 as we have dropped the original feature. Since \u2018Weekly Wage_sqrt\u2019 is normally distributed we can use the \u20183 Standard Deviations from the Mean\u2019 rule to identify the outliers. If your distribution was skewed you would be better off calculating the quantiles and then the IQR to identify your upper and lower boundaries."
+    },
+    {
+      "type": "sentence",
+      "content": "It is important to note continuous features such as \u2018Accident DateID\u2019 and \u2018Weekly Wage_sqrt\u2019 can often benefit from discretization or binning. Discretization entails cutting the feature values into groups or bins. This method is also a valid way to deal with outliers as they are typically brought closer to a mean of the distribution. This will ultimately change the feature from continuous to discrete as the end result will be the number of observations in each bin (ie. 0\u20131000, 1000\u20132000, 2000\u20135000, etc.)."
+    },
+    {
+      "type": "sentence",
+      "content": "The upper boundary was 51.146 and the lower boundary was -0.763. In other words, any value which falls outside either of these boundaries will be considered as an outlier. Notice that we used the three (3) standard deviation rule to determine outliers. We could have changed this value to 2 and our boundaries would have shrunk resulting more outliers."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/626/1*1Od4OogN5XxZ7-Ck4mCcMg.png"
+    },
+    { "type": "subtitle", "content": "Imbalanced Target Distribution" },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/580/1*P_UT4-vbsF06yxYVz6_UNg.png"
+    },
+    {
+      "type": "sentence",
+      "content": "Our target is \u2018Opiods Used\u2019 and as with most classification problems the false class tends to be the majority in terms of sheer numbers. As you can see above, almost 90% of all the cases are False or did not abuse opioids. Some ML algorithms such as decision trees and logistic regression tend to bias their predictions towards the majority class (ie. False in our case). There are a number of techniques we can use to solve this issue. Oversampling is a technique which attempts to add random copies of the minority class to the dataset until the imbalance is eliminated. Undersampling is the opposite of oversampling as it entails removing majority class observations. The major drawback is the idea of removing data which can lead to underfitting of your model. Last but not least, synthetic minority oversampling technique (SMOTE) uses the KNN algorithm to generate new observations to eliminate the imbalance. We\u2019ll use the SMOTE technique in this use case to generate new (synthetic) observations."
+    },
+    { "type": "subtitle", "content": "3. Pre-Processing Pipeline" },
+    {
+      "type": "sentence",
+      "content": "We need to split our data into train and test datasets but first let\u2019s convert the our features to proper format in order to coincide with our pipeline\u2019s requirements."
+    },
+    {
+      "type": "sentence",
+      "content": "In order to simplify the task of processing the data for missing data, rare values, cardinality, and encoding we will utilize Scikit-Learn\u2019s Pipeline library. A pipeline allows us to apply multiple processes into a single piece of code which will run each processes in series, one after another. Using a pipeline makes our code much easier to understand and much more reproducible."
+    },
+    {
+      "type": "sentence",
+      "content": "Our data processing pipeline makes extensive use of the \u201cFeature-Engine\u201d library. We could have used Scikit-Learn to accomplish these tasks but feature-engine has certain advantages which we would like to point out. First, being built on top of scikit-learn, pandas, Numpy and SciPy, feature-engine is able to return pandas dataframes instead of numpy arrays like scikit-learn. Secondly, feature-engine transformers are able to learn and store training parameters and transform your test data using the stored parameters."
+    },
+    {
+      "type": "sentence",
+      "content": "But enough about feature-engine, let\u2019s discuss the pipeline in more detail. It is important to understand the steps in a pipeline are run in series, starting with the top transformer. Often students make the mistake of applying the first step which ultimately changes the structure of the data or the name of the feature which is not recognized by the second stop."
+    },
+    {
+      "type": "sentence",
+      "content": "The first transformer \u201cArbitraryNumberImputer\u201d imputes continuous features with more than 5% of missing data with the value -99999. The second transformer, \u201cCategoricalVariableImputer\u201d, imputes categorical data with more than 5% of missing data with the string value of \u2018Missing\u201d. The third transformer, \u201cFrequentCategoryImputer\u201d, imputes categorical data with less than 5% of missing data with the mode of the feature. The fourth transformer, \u201cRareLabelCategoricalEncoder\u201d, encodes categorical and discrete feature observations which appear less than 1% of the time into a new category named \u201crare\u201d."
+    },
+    {
+      "type": "sentence",
+      "content": "The fifth transformer, \u201cOneHotCategoricalEncoder\u201d, transforms each unique value for each categorical feature into binary form stored in a new feature. For example, \u201cGender\u201d has the values of \u201cM\u201d, \u201cF\u201d and \u201cU\u201d. One hot encoding will produce three (or two \u201ck-1\u201d depending on your settings) new features (ie. Gender_M, Gender_F, Gender_U). If the observation has a value of \u201cM\u201d under the original \u201cGender\u201d feature then \u201cGender_M\u201d will have the value of 1 and \u201cGender_F\u201d and \u201cGender_U\u201d will have the values of 0. As this method greatly expands the feature space, now you understand why it was important to bin rare observations (<1%) as \u201crare\u201d."
+    },
+    {
+      "type": "sentence",
+      "content": "The final transformer, \u201cOridinalCategoricalEncoder\u201d, is specifically used to encode discrete features in order to maintain their ordered relationship with the target feature. Utilizing this encoder will generate missing values or throw an error for categories present in the test set which were not encoded in the training set. This is yet another reason to handle rare values before you encode ordinal/discrete features. To better understand this ordinal encoder let\u2019s examine the \u201cClaimant age\u201d feature. We have three potential values of \u201cF\u201d, \u201cM\u201d and \u201cU\u201d. Let\u2019s assume the average opioid abuse for \u201cF\u201d is 10%, \u201cM\u201d is 25% and \u201cU\u201d is 5%. The encoder will encode \u201cM\u201d as 1, \u201cF\u201d as 2, and \u201cU\u201d as 3 according to the magnitude of their average opioid abuse."
+    },
+    {
+      "type": "sentence",
+      "content": "Notice the expanded feature space to 155 features"
+    },
+    {
+      "type": "sentence",
+      "content": "Next, fit the pipeline onto X_train and y_train and transform X_train and X_test. Notice that our feature space has increased greatly to 155 features, this is due to the one-hot encoder we used on categorical features."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1106/1*0LNjZTUKyYRQdNzFM8eIIw.png"
+    },
+    { "type": "subtitle", "content": "4. Feature Scaling" },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1694/1*VUxomSobjzCuW0o6zK1Www.png"
+    },
+    {
+      "type": "sentence",
+      "content": "Finally, we have to scale the features in order to have all their values on the same range or magnitude. This step has to be done as most ML classifiers use Euclidean distance and features with higher magnitudes or range would have more influence on the prediction. For example temperature, 32 degree Fahrenheit is the same as 273.15 degrees Kelvin and if we were to use both features in a model Kelvin would have more weight or influence the prediction."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/948/1*gAkpx0hvzUbc7lQJxzpK5A.png"
+    },
+    {
+      "type": "sentence",
+      "content": "We used RobustScaler as it is very robust or sturdy against outliers. Notice that the outcome is a numpy array, let\u2019s transform it back to a dataframe. Finally, notice how the scaler has changes the values of our features to be on the same scale or magnitude."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1244/1*k2X16EIRcTH3kz-8NJuKiw.png"
+    },
+    { "type": "subtitle", "content": "5. Feature Selection" },
+    {
+      "type": "sentence",
+      "content": "Modern datasets in areas such as natural language processing and IoT are typically highly dimensional. It is not uncommon to see hundreds even thousands of features. Knowing how to narrow down the features to a selected few not only improves our changes of finding a generalizable model but also decreases are reliance on expensive computational power. By accurately reducing the number of features/dimensions in our data we are ultimately removing unnecessary noise from our data."
+    },
+    {
+      "type": "sentence",
+      "content": "It is important to note feature selection consists of not only the reduction in the feature space but also feature creation. Understanding how to find trends in your dataset and relationships among features (ie. polynomial features) takes many years of practice but pays big dividends in predictive power. There are whole college courses dedicated to feature selection/engineering but those interested more in the topic please research Filter, Wrapper and Enbedded methods as an introduction."
+    },
+    {
+      "type": "sentence",
+      "content": "RandomForestClassifier from Scikit-Learn has a \u201cfeature_importances_\u201d attribute which is used to determine the relative importance of each feature in your dataset. We will utilize this method in our example below. Random Forest is an ensemble method which uses many individual decision trees and aggregates their individual results to produce a more accurate prediction. More on ensemble methods later on."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/878/1*gbUqSVhI3928cZzzjvkeDA.png"
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1332/1*oAyNAftOBEVrhZWPH7hhFA.png"
+    },
+    {
+      "type": "sentence",
+      "content": "We were able to eliminate most of the original features down to just 20 which account for almost 76% of the performance variance. Any additional features would only add a very small additional predictive power."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1712/1*qfMK1jP5IiDnGBRq0bbHUw.png"
+    },
+    {
+      "type": "subtitle",
+      "content": "6. Handling the Imbalance in our Dataset"
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/812/1*r0N7vC8DteP4_kZj35iv4A.png"
+    },
+    {
+      "type": "sentence",
+      "content": "If you recall from our initial examination of the dataset the target variable was imbalanced. We had significantly more observations which did not result in opioid abuse (89%) compared to those which resulted in opioid abuse (10%). We also decided to use the SMOTE method as it creates new synthetic observations instead of copying existing observations. SMOTE uses KNN (typically k=5) where a random observation from the minority class is selected and k of the nearest neighbors are found. Then, one of the k neighbors is randomly selected and a synthetic sample is built from a randomly selected point between the original observation and the randomly selected neighbor."
+    },
+    {
+      "type": "sentence",
+      "content": "By applying SMOTE we were able to create additional minority cases to have a balanced target."
+    },
+    { "type": "subtitle", "content": "7. Classifier Evaluation" },
+    {
+      "type": "sentence",
+      "content": "When evaluating the various trained classifiers we need to really think about the performance metric we want to use. The metric we use to evaluate our classifier really depends on the nature of our problem or the potential consequences of prediction error. Let\u2019s examine a very common example of cancer diagnosis (ie. diagnosed with cancer or not diagnosed with cancer). We obviously want our model to predict as many actual cancer diagnoses as possible but we also know that it is statistically impossible to correctly identify all true cancer diagnoses. Our model will eventually predict someone to have cancer when they actually don\u2019t have cancer (false positive) and predict someone not to have cancer when they actually have cancer (false negative). The question we have to ask ourselves is \u201cWhat is worse? Predicting someone to have cancer when they actually don\u2019t or predicting someone not to have cancer when they actually do?\u201d. The answer in this example is obvious as the consequences of telling someone they don\u2019t have cancer when they do far outweigh the opposite. Let\u2019s keep this example in mind but let\u2019s review the commonly used classification performance metrics."
+    },
+    { "type": "subtitle", "content": "Classification Performance Metrics" },
+    { "type": "subtitle", "content": "Confusion Matrix" },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1430/1*jYoVGvwPH0qt2M7Xq24jTQ.png"
+    },
+    {
+      "type": "sentence",
+      "content": "A confusion matrix will provide a count of predictions for each of the 4 quadrants (TP, FP, FN, TN). We ultimately would want our model to predict as many True Positive (TP) and True Negative (TN) and as few False Positive (FP) and False Negative (FN) diagnoses. Much of the remaining performance metrics are derived from this chart so it is imperative you have a good understand."
+    },
+    { "type": "subtitle", "content": "Accuracy" },
+    {
+      "type": "sentence",
+      "content": "In simplest terms, accuracy details how often is the classifier correct. In other words, is the number of correct predictions (TP, TF) divided by the total number of predictions. Accuracy is important when you\u2019re only interested in TP and TN. Accuracy is typically the first metric but it only tells one side of the story and it doesn\u2019t consider the cancer consequences we discussed above."
+    },
+    { "type": "sentence", "content": "(TP+TN)/(TP+FP+FN+TN)" },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1444/1*gr4szbbV3jz3ALlC9BPYTg.png"
+    },
+    { "type": "subtitle", "content": "Precision" },
+    {
+      "type": "sentence",
+      "content": "Precision tells us what percentage of the predicted positive class was correct. In other words, what percentage of predicted positive cancer diagnoses actually had cancer. Precision cares only that our model accurately predicted the positive class. High precision relates to low FP rates."
+    },
+    { "type": "sentence", "content": "TP/(TP+FP)" },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1470/1*S_7Y3H3QUrZGVhbvc7S9xA.png"
+    },
+    { "type": "subtitle", "content": "Recall (also called Sensitivity)" },
+    {
+      "type": "sentence",
+      "content": "Recall can be seen as precision only backwards. In other words, what percentage of actual positives our model predicted to be positive. What percentage of people actually diagnosed with cancer (by a doctor) our model predicted to have cancer. Recall cares less about accurately predicting positive cases but making sure we have captured all the positive cases. High recall relates to low FN rates."
+    },
+    { "type": "sentence", "content": "TP/(TP+FN)" },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1444/1*GgYP22AqGsn7ep-lMSkuIQ.png"
+    },
+    { "type": "subtitle", "content": "F1 Score" },
+    {
+      "type": "sentence",
+      "content": "It is mathematically impossible to have both high precision and high recall and this is where the f1-score comes in handy. F1-score is the harmonic or weighted average of precision and recall. If you\u2019re trying to produce a model which balances precision and recall, f1-score is a great option. F1-score is also a good option when you have an imbalanced dataset. A good f1-score means you have low FP and low FN."
+    },
+    {
+      "type": "sentence",
+      "content": "2*(Recall * Precision) / (Recall + Precision)"
+    },
+    { "type": "subtitle", "content": "ROC Curve/AUC Score" },
+    {
+      "type": "sentence",
+      "content": "The receiver operating characteristics curve (ROC) plots the true positive rate against the false positive rate at any probability threshold. The threshold is the specified cut off for an observation to be classified as either 0 (no cancer) or 1 (has cancer). Before we discuss the ROC curve and AUC score let\u2019s review a logistic regression example trying to predict whether or not an individual is obese. This will help us better understand what is a threshold and how we can adjust the model\u2019s prediction by changing the threshold. This example will also bring in the concepts of TP, TN, FN and FP you learned above."
+    },
+    {
+      "type": "sentence",
+      "content": "Follow along all this will makes sense I promise :)"
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1530/1*8Rc2KtcPHhni8yOU8rhQbg.png"
+    },
+    {
+      "type": "sentence",
+      "content": "A logistic regression is a binary classifier and in the example above, we are trying to correctly predict obesity based on only one feature/predictor, weight. We have a dataset of 9 observations, where 4 (green) observations are not obese and 5 (red) are actually obese. Based on the sigmoid function (the curvy line) produced by the log regression the first 3 green non-obese observations have a 0% chance of being predicted as obese based on their weight. The last 3 red obese observations also have a 100% probability of being predicted as obese. The second red obese observation has a ~70% chance of being predicted as obese."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1544/1*9Gf7jCF32KVzQvA7inbeVw.png"
+    },
+    {
+      "type": "sentence",
+      "content": "However, the 4th green non-obese observation has a ~85% chance of being predicted as obese based on its weight (must be very muscular), which is obviously the wrong prediction. Also, the first obese observation has a ~15% chance of being obese which once again the wrong prediction. Keep in mind the threshold is 0.5"
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1506/1*yKweFrL2cxIqb28-PEoU-A.png"
+    },
+    {
+      "type": "sentence",
+      "content": "Let\u2019s assume the consequences of incorrectly predicting someone not to be obese when they actually are obese are significant. In other words, we want to adjust the model in a way that it would capture or predict as many actual obese individuals as possible. In order to accomplish this task, we need to change our threshold. With the threshold lowered to 0.2 our model will correctly predict all 5 obese observations as obese."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/proxy/1*wKRlKSIEVv8UOP3N4dPQRA.png"
+    },
+    {
+      "type": "sentence",
+      "content": "However, by lowering the threshold to 0.2 the fourth non-obese observation was now predicted as obese. This is the trade-off we make when adjusting model\u2019s threshold."
+    },
+    {
+      "type": "sentence",
+      "content": "Once again let\u2019s consider our cancer example. We would be ok with a model with a 0.2 threshold as it would correctly predict all actual cancer diagnoses (ie. True Positives). However, the model would make a trade-off as it would ultimately predict more individuals who actually didn\u2019t have cancer as having cancer (ie. False Positives). The consequences of the false positives are less severe than incorrectly predicting someone to not have cancer when they actually do."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1534/1*UwST-H78Jjjwf4ZifPTAjw.png"
+    },
+    {
+      "type": "sentence",
+      "content": "Now a model with a 0.9 threshold would do the opposite of a 0.2 threshold. It would make sure to predict all 4 non-obese individuals as non-obese, however, the first two obese individuals would ultimately be predicted as non-obese. Now that we understand the threshold and its purpose let\u2019s return to the ROC curve."
+    },
+    {
+      "type": "sentence",
+      "content": "This was an easy example with only 9 data points where the threshold was easy to see and interpret. What if you have a million observations and a more complicated situation compared to our obesity or cancer example. What would be the best threshold in that situation? Do we have to make a bunch of these graphs in order to find a threshold which best suits our needs?\u201d. The answer is No. An ROC curve is a great way to quickly summarize this data so you can choose your threshold."
+    },
+    {
+      "type": "sentence",
+      "content": "Here is an example of an ROC curve, notice the true positive rate (actually obese and predicted as obese) on the y-axis and false positive rate (non-obese but predicted as obese) on the x-axis. Finally, remember an ROC is used to summarize the TP rate and the FP rate at various thresholds."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1142/1*VZj_gz0LFJhUu7b395wfAA.png"
+    },
+    { "type": "subtitle", "content": "True Positive Rate" },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1444/1*GgYP22AqGsn7ep-lMSkuIQ.png"
+    },
+    { "type": "subtitle", "content": "False Positive Rate" },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1458/1*3QWg7m23sHs8QPL26-jbNA.png"
+    },
+    {
+      "type": "sentence",
+      "content": "Let\u2019s quickly compare 3 separate thresholds on the ROC curve. A threshold of 0.9 has the following confusion matrix from which we can calculate a TP rate of 0.6 and a FP rate of 0.2."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1094/1*svEHr4OKyUZWlMoHbSuWIw.png"
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1534/1*UwST-H78Jjjwf4ZifPTAjw.png"
+    },
+    {
+      "type": "sentence",
+      "content": "Let\u2019s plot the TP rate and FP rate points on our ROC curve. Let\u2019s also plot the TP and FP rates for thresholds of 0.6 and 0.2 for demonstration."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1420/1*i0vdTgJ1t4EadxUDpHcLqA.png"
+    },
+    {
+      "type": "sentence",
+      "content": "The green dashed line represents the ROC curve but let\u2019s ignore that for right now. The individual blue points are the result of 4 separate confusion matrixes where the threshold was adjusted. Now ask yourself, \u201cIf this was the cancer example and you wanted to make sure you captured/predicted all actual cancer diagnoses, which threshold would you choose?\u201d\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026..If you said 0.2 you are correct! At this threshold, your TP rate is 100% which means you\u2019re capturing/predicting all actual cancer diagnoses. Your FP rate is ~0.33 which means your model is misclassifying some non-cancer diagnoses as having cancer but that\u2019s alright. Scaring someone and having them spend the money to get tested carries fewer consequences than telling someone they don\u2019t have cancer when they actually do."
+    },
+    {
+      "type": "sentence",
+      "content": "Now the ROC simply connects each point in order to help with visualizing threshold move from very conservative to more lenient. Finally, the ROC curve helps with visualizing the AUC."
+    },
+    {
+      "type": "sentence",
+      "content": "You will often see a ROC graph with many ROC curves and each curve is a different classifier (ie. log regression, SVC, decision tree, etc.). AUC is a great simple metric which provides a decimal number from 0 to 1 where the higher the number the better is the classifier. AUC measures the quality of the model\u2019s predictions no matter the threshold. We will see the ROC curves along with their AUC scores for our opioid problem below."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1670/1*4cgt2Mngu9tkhFzTeh5e4A.png"
+    },
+    { "type": "subtitle", "content": "Evaluating our Classifiers" },
+    {
+      "type": "sentence",
+      "content": "Now that we have a better understanding of the metrics used to evaluate classification models let\u2019s get back to our problem at hand. We will be evaluating 6 classifiers; logistic regression, random forest, knn, gradient boosting classifier, naive bayes, and support vector machine. In terms of metrics, we will focus our attention mainly on recall as we desperately want to predict/capture as many individuals who abuse opioid as possible. Furthermore, we will explore precision, accuracy and F1-score by the way of a classification report."
+    },
+    {
+      "type": "sentence",
+      "content": "Let\u2019s remember our finalized datasets:"
+    },
+    {
+      "type": "sentence",
+      "content": "X_train_rf_smote: containing only important features with smote applied"
+    },
+    {
+      "type": "sentence",
+      "content": "y_train_rf_smote: smote applied to balance the target"
+    },
+    {
+      "type": "sentence",
+      "content": "X_test_rf: containing only important features"
+    },
+    { "type": "sentence", "content": "y_test: untouched target feature" },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1240/1*O6iwOlgsV6XYdKGdN5TqTg.png"
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1110/1*N-xNpi3X7gZHieuAkJ5TLg.png"
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1158/1*OiAddr9uoDDdvYWtrjHVSw.png"
+    },
+    {
+      "type": "sentence",
+      "content": "Before we continue let\u2019s review the classification report for each model shown above. By the time you produce a classification report, you should have a good idea which performance metric you want to use. Focus your attention on that metric or metrics."
+    },
+    {
+      "type": "sentence",
+      "content": "Let\u2019s being with precision (ie. what percentage of our predictions were correct?), recall (ie. for all observations that were actually positive, what percent was predicted correctly?), F1-score and support. Notice that we have a precision, recall and F1-score for both 0 and 1, where 0 is did not abuse opioids and 1 abused opioids. Looking at the SVC classifier we see that the model correctly predicted the zero (0) class 90% of the time but it only correctly predicted the one (1) class 17% of the time."
+    },
+    {
+      "type": "sentence",
+      "content": "On to recall, out of all the zero (0) class (ie. non-users) the model predicted 91% correctly. However, out of all the one (one) class (ie. users), the model predicted only 17% correctly. This is due to the class imbalance as the classifier is more likely to predict the zero (0) class based on sheer probability."
+    },
+    {
+      "type": "sentence",
+      "content": "F1-score is the harmonic mean of precision and recall which is easy to understand. The support is the total number of class observations for the target. In other words, the test dataset had an imbalance of opioid non-users and users. We did not apply SMOTE to the test set, if you remember."
+    },
+    {
+      "type": "sentence",
+      "content": "Let\u2019s examine macro and weight averages as their interpretation is specifically geared towards whether or not you have a class imbalance (support). Macro avg is a simple average between the zero (0) and (1) classes. It weighs each class equally or in other words, as if there is no class imbalance. Macro avg interprets the classifier with a larger penalty when it does not perform/predict the minority class well. In other words, if the classes were balanced what would be your average. When there is a class imbalance the macro avg provides a better estimate of your classifier."
+    },
+    {
+      "type": "sentence",
+      "content": "Weighted average, calculates the average for each class independently and it adds a weight to each average depending on the number of the true (1) target class. The problem with weighted averages is the fact the performance of the minority class is given less weight. Therefore, weighted averages hide the performance of the minority class. This is especially undesirable as the minority class (ie. opioid user) is very often the class we are most interested in."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1108/1*J5P0Bo8I-GstbJapDBXYOQ.png"
+    },
+    {
+      "type": "sentence",
+      "content": "Looking at our trained classifiers it seem GradientBoostingClassifier to be performing the best. We have specifically chosen to focus our attention on recall. We want to make sure we capture as many individuals who abuse opioids as possible even if that means our the classifier incorrectly some false positives. Out of all the actual opioid users in the test set the classifier correctly predicted 85% of them. The macro average recall was 91% which means the model is good at predicting both actual non-user and users."
+    },
+    {
+      "type": "sentence",
+      "content": "Let\u2019s build a GradientBoostingClassifier model and tune its parameters."
+    },
+    {
+      "type": "sentence",
+      "content": "We\u2019ll leave you with the ROC/AUC graph for the tested classifiers (Omitting SVC due to its extended training time)."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1600/1*KcCu1ZtE_2emkVUlQbYhPQ.png"
+    },
+    { "type": "subtitle", "content": "8. Hyperparameter Tuning" },
+    {
+      "type": "subtitle",
+      "content": "What are ensemble models such as GradientBoostingClassifier?"
+    },
+    {
+      "type": "sentence",
+      "content": "We wouldn\u2019t go into the details of ensemble models but essentially they use multiple models to improve their prediction. Imagine you are in the market for a new car, a brand new sports car. Are you going to buy the first sport car you see? Of course not, you are going to do your research. You\u2019ll read countless reviews, watching hours of YouTube videos and ask the opinion of others who own the car before you make your decision. Well, ensemble models work in the same way. Each different review/opinion is a different model and together they provide a wholistic perspective/prediction."
+    },
+    { "type": "subtitle", "content": "What are hyperparameters?" },
+    {
+      "type": "sentence",
+      "content": "Think of hyperparameters are \u2018tuning\u2019 knobs. Imagine you are editing a picture in order to achieve a certain effect. You can tune the picture using \u2018knobs\u2019 such as exposure, highlights, shadows, contrast, brightness, saturation, warmth, tint, etc. Well, hyperparameters are the same type of \u2018knobs\u2019 but for classifiers."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1340/1*xEoq2qXWk6_b1t4SyRRJRw.png"
+    },
+    {
+      "type": "sentence",
+      "content": "Highlighted are all the hyperparameters and explaining all of them is out of the scope of this blog. We can adjust all or only a selected few, but beware trying to tune too many parameters all at once will take several hours even days depending on the power of your computer and size of the dataset. Notice that each hyperparameter has default values."
+    },
+    {
+      "type": "sentence",
+      "content": "Hyperparameters Used: learning rate, max_depth and n_estimators."
+    },
+    {
+      "type": "sentence",
+      "content": "We\u2019ll be using the GridSearchCV library from Sklearn. GridSearchCV takes in specified (by you building the model) hyperparameters such as \u2018learning_rate\u2019 along with the range of values for each hyperparameter. It will then iterate over everything possible combination of all hyperparameters and their ranges of values training the model at each iteration. Once again depending on the number of hyperparameters and the size of your data this process can take a very long time. Once finished, GridSearchCV will provide you with the best combination of parameters for the chosen scoring metric which in our case is recall. Remember the best combination selected by the algorithm will be out of the hyperparameters and the ranges you specified. In other words, there might be a better combination of hyperparameters. This is often an iterative process where we would test unique combinations with stricter and stricter value ranges for each hyperparameter."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1298/1*7LJNNqsaVGUtxsrRNleepQ.png"
+    },
+    {
+      "type": "sentence",
+      "content": "GridSearchCV has revealed that a learning_rate of 0.01, max_depth of 2.0 and n_estimators of 1 will produce the best model. It managed to improve upon our initial training recall score of 96% to 98%."
+    },
+    {
+      "type": "subtitle",
+      "content": "Training Model with Optimized Hyperparameters"
+    },
+    {
+      "type": "sentence",
+      "content": "Let\u2019s train our GradientBoostingClassifier model but this time using the hyperparameters provided by GridSearchCV."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1092/1*qsQoYNnExcBddWI-VDofRQ.png"
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1310/1*i9TeJTCqJoSVJ65BVP6tBg.png"
+    },
+    {
+      "type": "sentence",
+      "content": "Recall our initial training with the default hyperparameters yielded a 96% recall on the training set and a 85% of recall on the test set. By applying the optimized hyperparameters we were able to increase our recall to 98% on the training set. What\u2019s more impressive is the fact we increased our recall on the test set from 85% to 95%! In other words, we were able to correctly predict 95% of actual opioid users."
+    },
+    {
+      "type": "sentence",
+      "content": "Let\u2019s review the classification report in more detail. When the model predicted someone not to be an opioid user it was correct 99% of the time (precision) but only 32% correct when someone was an opioid user. On the other hand, the model correctly predicted 77% of actual non-opioid users and 95% of actual opioid users. Since the test set was imbalanced our macro average of precision was 66% and 86% for recall."
+    },
+    {
+      "type": "sentence",
+      "content": "Let\u2019s take a look at the confusion matrix (located just underneath the classification report) as it really showcases what happens when we favor one metric over another. If you recall, we were dead set on predicting/capturing as many opioid users as possible even if that meant we had some false positives (not a user but predicted to be a user). Our model correctly predicted almost 33,000 actual opioid users and 4,724 non-users. It predicted over 10,000 individuals to be opioid users when in reality they were not. However, the number we should really focus on are the 248 individuals who are opioid users but our model predicted them not to be. Those are the patients who \u2018slipped through\u2019 unfortunately."
+    },
+    {
+      "type": "image",
+      "content": "https://miro.medium.com/max/1592/1*jJV2XGGytY65tRAVJ7OWhw.png"
+    },
+    { "type": "subtitle", "content": "Conclusion" },
+    {
+      "type": "sentence",
+      "content": "Understanding the full nature of a data science classification problem is key in your maturity as a data scientist. I hope you found this tutorial informative and easily understood. I welcome any feedback and suggestions as we are all just honing our craft."
+    },
+    {
+      "type": "sentence",
+      "content": "https://github.com/Kmysiak/Opioid_Classification"
+    }
+  ],
+  "topic": "data-science"
+}
