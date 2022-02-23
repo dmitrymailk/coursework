@@ -1,0 +1,507 @@
+sentences,affirmative,negative,question,type
+I can do it,1.0,0.0,0.0,can
+I can take care of myself,1.0,0.0,0.0,can
+One cannot see them with the naked eye,0.0,1.0,0.0,can
+I can't see the bones all right,0.0,1.0,0.0,can
+Can you look at my screen? ,0.0,0.0,1.0,can
+can you believe the luck?,0.0,0.0,1.0,can
+You can spend it with a free conscience,1.0,0.0,0.0,can
+I can handle it,1.0,0.0,0.0,can
+I can't get it,0.0,1.0,0.0,can
+you can't see them,0.0,1.0,0.0,can
+Can the system learn to predict crime targets?,0.0,0.0,1.0,can
+Can that be prevented?,0.0,0.0,1.0,can
+You can ask Dorothy,1.0,0.0,0.0,can
+You can know everything in the world and still make bad decisions,1.0,0.0,0.0,can
+you can't get a copy of your genome,0.0,1.0,0.0,can
+we can't identify the troublemaking gene,0.0,1.0,0.0,can
+can anyone do this?,0.0,0.0,1.0,can
+can doctors cure it?,0.0,0.0,1.0,can
+that device can track your location,1.0,0.0,0.0,can
+I can remember,1.0,0.0,0.0,can
+I can't walk,0.0,1.0,0.0,can
+I can't just imagine,0.0,1.0,0.0,can
+can I explain?,0.0,0.0,1.0,can
+can you laugh at it?,0.0,0.0,1.0,can
+you can go to Californy,1.0,0.0,0.0,can
+You can sit up,1.0,0.0,0.0,can
+we can't get them,0.0,1.0,0.0,can
+We can't stop right here,0.0,1.0,0.0,can
+can we rest tonight?,0.0,0.0,1.0,can
+Can we swim in it?,0.0,0.0,1.0,can
+you can enjoy the evening now!,1.0,0.0,0.0,can
+ I can do everything,1.0,0.0,0.0,can
+I can't  help him,0.0,1.0,0.0,can
+You can't know everything,0.0,1.0,0.0,can
+Can floors be added? ,0.0,0.0,1.0,can
+Can you remember anything?,0.0,0.0,1.0,can
+it can be so,1.0,0.0,0.0,can
+I can talk,1.0,0.0,0.0,can
+you can't hear my words,0.0,1.0,0.0,can
+they cannot kill the bird,0.0,1.0,0.0,can
+Can you point it out to me?,0.0,0.0,1.0,can
+Can he hear me talking?,0.0,0.0,1.0,can
+I could do it,1.0,0.0,0.0,could
+I could take care of myself,1.0,0.0,0.0,could
+One couldn't see them with the naked eye,0.0,1.0,0.0,could
+I couldn't see the bones all right,0.0,1.0,0.0,could
+could you look at my screen? ,0.0,0.0,1.0,could
+could you believe the luck?,0.0,0.0,1.0,could
+You could spend it with a free conscience,1.0,0.0,0.0,could
+I could handle it,1.0,0.0,0.0,could
+I could get it,0.0,1.0,0.0,could
+you could see them,0.0,1.0,0.0,could
+could the system learn to predict crime targets?,0.0,0.0,1.0,could
+could that be prevented?,0.0,0.0,1.0,could
+You could ask Dorothy,1.0,0.0,0.0,could
+You could know everything in the world and still make bad decisions,1.0,0.0,0.0,could
+you couldn't get a copy of your genome,0.0,1.0,0.0,could
+we couldn't identify the troublemaking gene,0.0,1.0,0.0,could
+could anyone do this?,0.0,0.0,1.0,could
+could doctors cure it?,0.0,0.0,1.0,could
+that device could track your location,1.0,0.0,0.0,could
+I could remember,1.0,0.0,0.0,could
+I couldn't walk,0.0,1.0,0.0,could
+I couldn't just imagine,0.0,1.0,0.0,could
+could I explain?,0.0,0.0,1.0,could
+could you laugh at it?,0.0,0.0,1.0,could
+you could go to Californy,1.0,0.0,0.0,could
+You could sit up,1.0,0.0,0.0,could
+we couldn't get them,0.0,1.0,0.0,could
+We couldn't stop right here,0.0,1.0,0.0,could
+could we rest tonight?,0.0,0.0,1.0,could
+could we swim in it?,0.0,0.0,1.0,could
+you could enjoy the evening now!,1.0,0.0,0.0,could
+ I could do everything,1.0,0.0,0.0,could
+I couldn't help him,0.0,1.0,0.0,could
+You couldn't know everything,0.0,1.0,0.0,could
+could floors be added? ,0.0,0.0,1.0,could
+could you remember anything?,0.0,0.0,1.0,could
+it could be so,1.0,0.0,0.0,could
+I could talk,1.0,0.0,0.0,could
+you couldn't hear my words,0.0,1.0,0.0,could
+they could not kill the bird,0.0,1.0,0.0,could
+could you point it out to me?,0.0,0.0,1.0,could
+could he hear me talking?,0.0,0.0,1.0,could
+He will go to school,1.0,0.0,0.0,future_simple
+I will go to Paris next summer,1.0,0.0,0.0,future_simple
+Will we go to the beach?,0.0,0.0,1.0,future_simple
+Will your boss agree with our conditions?,0.0,0.0,1.0,future_simple
+Fred won't agree to help us.,0.0,1.0,0.0,future_simple
+It will not be easy to convince him.,0.0,1.0,0.0,future_simple
+" I will go to the river, swim and fish every day.",1.0,0.0,0.0,future_simple
+He will play tennis ,1.0,0.0,0.0,future_simple
+Will you buy that blue car?,0.0,0.0,1.0,future_simple
+Will she call me back? ,0.0,0.0,1.0,future_simple
+I will not come,0.0,1.0,0.0,future_simple
+I will not take your bag ,0.0,1.0,0.0,future_simple
+He'll drive this road ,1.0,0.0,0.0,future_simple
+We will take a taxi.,1.0,0.0,0.0,future_simple
+Will they win this match? ,0.0,0.0,1.0,future_simple
+Will I come?,0.0,0.0,1.0,future_simple
+They will not agree,0.0,1.0,0.0,future_simple
+We will not find,0.0,1.0,0.0,future_simple
+He will spend his vacation in China.,1.0,0.0,0.0,future_simple
+ I will go to Madrid,1.0,0.0,0.0,future_simple
+It won't happen again,0.0,1.0,0.0,future_simple
+The meeting won't begin on time,0.0,1.0,0.0,future_simple
+Will you see?The rain won't probably stop soon,0.0,0.0,1.0,future_simple
+Will you send me a postcard?,0.0,0.0,1.0,future_simple
+They will stay in Rome for a few more days,1.0,0.0,0.0,future_simple
+I will always love you,1.0,0.0,0.0,future_simple
+People won't go to Jupiter even in 100 years,0.0,1.0,0.0,future_simple
+The bright sun won't rise again,0.0,1.0,0.0,future_simple
+Will you call Jenny tomorrow evening? ,0.0,0.0,1.0,future_simple
+Will you help me to find an earring?,0.0,0.0,1.0,future_simple
+You will regret this,1.0,0.0,0.0,future_simple
+ I will stop you!,1.0,0.0,0.0,future_simple
+ The birds will not eat it,0.0,1.0,0.0,future_simple
+I won't come to see you,0.0,1.0,0.0,future_simple
+Will you show me  this camera?,0.0,0.0,1.0,future_simple
+Will you kill Bill? ,0.0,0.0,1.0,future_simple
+Kelly will pass the exam,1.0,0.0,0.0,future_simple
+My father won't lend me his car,0.0,1.0,0.0,future_simple
+Will you have a cup of tea?,0.0,0.0,1.0,future_simple
+You will stand your ground,1.0,0.0,0.0,future_simple
+Sally was doing her homework ,1.0,0.0,0.0,past_continuous
+Dad and I were fishing ,1.0,0.0,0.0,past_continuous
+It wasn't standing,0.0,1.0,0.0,past_continuous
+They weren't playing sports ,0.0,1.0,0.0,past_continuous
+Were you still working at school?,0.0,0.0,1.0,past_continuous
+Was he playing the guitar? ,0.0,0.0,1.0,past_continuous
+You were wasting your time,1.0,0.0,0.0,past_continuous
+ I was learning grammar,1.0,0.0,0.0,past_continuous
+I wasn't doing that,0.0,1.0,0.0,past_continuous
+You weren't not listening,0.0,1.0,0.0,past_continuous
+Were you listening to realistic songs?,0.0,0.0,1.0,past_continuous
+Were you coming to our home?,0.0,0.0,1.0,past_continuous
+We were making a party tonight,1.0,0.0,0.0,past_continuous
+They were performing this week,1.0,0.0,0.0,past_continuous
+You were not watching TV,0.0,1.0,0.0,past_continuous
+I wasn't standing,0.0,1.0,0.0,past_continuous
+were you watching cricket on television?,0.0,0.0,1.0,past_continuous
+were you visiting your cousin this weekend?,0.0,0.0,1.0,past_continuous
+Jack was talking on the phone ,1.0,0.0,0.0,past_continuous
+ We were landing in Moscow ,1.0,0.0,0.0,past_continuous
+I was not studying to become a dentist,0.0,1.0,0.0,past_continuous
+I was reading the book Tom Sawyer,0.0,1.0,0.0,past_continuous
+Is she laughing?,0.0,0.0,1.0,past_continuous
+Are they listening to the teacher?,0.0,0.0,1.0,past_continuous
+The doctor is conducting an operation,1.0,0.0,0.0,past_continuous
+ She is taking a picture,1.0,0.0,0.0,past_continuous
+I am not going to the party tonight,0.0,1.0,0.0,past_continuous
+You were not swimming ,0.0,1.0,0.0,past_continuous
+were they coming to your party?,0.0,0.0,1.0,past_continuous
+were you listening?,0.0,0.0,1.0,past_continuous
+He was reading various kinds of books,1.0,0.0,0.0,past_continuous
+They were playing football now,1.0,0.0,0.0,past_continuous
+They weren't reading their books,0.0,1.0,0.0,past_continuous
+I wasn't going to the party tonight,0.0,1.0,0.0,past_continuous
+was he sitting or standing?,0.0,0.0,1.0,past_continuous
+were you sleeping?,0.0,0.0,1.0,past_continuous
+We were coming for shopping in the market,1.0,0.0,0.0,past_continuous
+She was drinking coffee,1.0,0.0,0.0,past_continuous
+Sarah wasn't coming home,0.0,1.0,0.0,past_continuous
+Ben wasn't searching for a project,0.0,1.0,0.0,past_continuous
+"were you working on any special projects at work?
+",0.0,0.0,1.0,past_continuous
+was he visiting his parents? ,0.0,0.0,1.0,past_continuous
+He went to school,1.0,0.0,0.0,past_simple
+He didn't go to school,0.0,1.0,0.0,past_simple
+Did he go to school? ,0.0,0.0,1.0,past_simple
+I saw him yesterday,1.0,0.0,0.0,past_simple
+He went to Italy last month,1.0,0.0,0.0,past_simple
+We did not discuss,0.0,1.0,0.0,past_simple
+They did not forget,0.0,1.0,0.0,past_simple
+Did it work? ,0.0,0.0,1.0,past_simple
+Did he tell? ,0.0,0.0,1.0,past_simple
+She spoke to him,1.0,0.0,0.0,past_simple
+"Aivazovsky painted ""the Ninth Wave""",1.0,0.0,0.0,past_simple
+She did not run yesterday,0.0,1.0,0.0,past_simple
+They did not work last summer.,0.0,1.0,0.0,past_simple
+Did they sign the contract?,0.0,0.0,1.0,past_simple
+Did you wash your hands?,0.0,0.0,1.0,past_simple
+That museum had a great collection of paintings,1.0,0.0,0.0,past_simple
+We took evening courses,1.0,0.0,0.0,past_simple
+We did not find our car,0.0,1.0,0.0,past_simple
+I did not understand this question,0.0,1.0,0.0,past_simple
+"did she sell her phone?
+
+",0.0,0.0,1.0,past_simple
+"did you steal this thing?
+",0.0,0.0,1.0,past_simple
+"I saw him five days ago
+",1.0,0.0,0.0,past_simple
+"They lived in England in 1999 year
+",1.0,0.0,0.0,past_simple
+"Нe did not swim yesterday
+",0.0,1.0,0.0,past_simple
+"They did not work last summer
+",0.0,1.0,0.0,past_simple
+"Did he call you last week?
+",0.0,0.0,1.0,past_simple
+"Did they buy a new car?
+",0.0,0.0,1.0,past_simple
+She worked abroad,1.0,0.0,0.0,past_simple
+My uncle lived here,1.0,0.0,0.0,past_simple
+We did not discuss,0.0,1.0,0.0,past_simple
+Allen didn't want to stay,0.0,1.0,0.0,past_simple
+Did you go to the post office?,0.0,0.0,1.0,past_simple
+Did they come?,0.0,0.0,1.0,past_simple
+Harry wrote a lot of books,1.0,0.0,0.0,past_simple
+ He smiled at me,1.0,0.0,0.0,past_simple
+I didn't work yesterday,0.0,1.0,0.0,past_simple
+Ben didn't break the rules,0.0,1.0,0.0,past_simple
+Did they forget?,0.0,0.0,1.0,past_simple
+Didn't you eat yet?,0.0,0.0,1.0,past_simple
+I tried my best to study English,1.0,0.0,0.0,past_simple
+Sally is doing her homework at the moment,1.0,0.0,0.0,present_continuous
+Dad and I are fishing now,1.0,0.0,0.0,present_continuous
+It is not standing,0.0,1.0,0.0,present_continuous
+They're not playing sports ,0.0,1.0,0.0,present_continuous
+Are you still working at school?,0.0,0.0,1.0,present_continuous
+Is he playing the guitar? ,0.0,0.0,1.0,present_continuous
+You are wasting your time,1.0,0.0,0.0,present_continuous
+ I am learning grammar,1.0,0.0,0.0,present_continuous
+I'm not doing that,0.0,1.0,0.0,present_continuous
+You're not listening,0.0,1.0,0.0,present_continuous
+Are you listening to realistic songs?,0.0,0.0,1.0,present_continuous
+Are you coming to our home?,0.0,0.0,1.0,present_continuous
+We are making a party tonight,1.0,0.0,0.0,present_continuous
+They are performing this week,1.0,0.0,0.0,present_continuous
+You are not watching TV,0.0,1.0,0.0,present_continuous
+I am not standing,0.0,1.0,0.0,present_continuous
+Are you watching cricket on television?,0.0,0.0,1.0,present_continuous
+Are you visiting your cousin this weekend?,0.0,0.0,1.0,present_continuous
+Jack is talking on the phone now,1.0,0.0,0.0,present_continuous
+ We are landing in Moscow in 20 minutes,1.0,0.0,0.0,present_continuous
+I am not studying to become a dentist,0.0,1.0,0.0,present_continuous
+I am reading the book Tom Sawyer,0.0,1.0,0.0,present_continuous
+Is she laughing?,0.0,0.0,1.0,present_continuous
+Are they listening to the teacher?,0.0,0.0,1.0,present_continuous
+The doctor is conducting an operation,1.0,0.0,0.0,present_continuous
+ She is taking a picture,1.0,0.0,0.0,present_continuous
+I am not going to the party tonight,0.0,1.0,0.0,present_continuous
+You are not swimming now,0.0,1.0,0.0,present_continuous
+Are they coming to your party?,0.0,0.0,1.0,present_continuous
+Are you listening?,0.0,0.0,1.0,present_continuous
+He is reading various kinds of books,1.0,0.0,0.0,present_continuous
+They are playing football now,1.0,0.0,0.0,present_continuous
+They are not reading their books,0.0,1.0,0.0,present_continuous
+I am not going to the party tonight,0.0,1.0,0.0,present_continuous
+Is he sitting or standing?,0.0,0.0,1.0,present_continuous
+Are you sleeping?,0.0,0.0,1.0,present_continuous
+We are coming for shopping in this market,1.0,0.0,0.0,present_continuous
+She is drinking coffee,1.0,0.0,0.0,present_continuous
+Sarah isn't coming home,0.0,1.0,0.0,present_continuous
+Ben isn't sitting next to us,0.0,1.0,0.0,present_continuous
+"Are you working on any special projects at work?",0.0,0.0,1.0,present_continuous
+Is he visiting his parents next weekend?,0.0,0.0,1.0,present_continuous
+I have finished reading Hurry Potter this week,1.0,0.0,0.0,present_perfect
+I have studied English since primary school,1.0,0.0,0.0,present_perfect
+I have not seen my hometown for 45 years,0.0,1.0,0.0,present_perfect
+They haven't seen that performance ,0.0,1.0,0.0,present_perfect
+Have you seen this film?,0.0,0.0,1.0,present_perfect
+ Has she come yet?,0.0,0.0,1.0,present_perfect
+She has translated articles,1.0,0.0,0.0,present_perfect
+ He has grown up,1.0,0.0,0.0,present_perfect
+I haven't heard him for the last 3 years,0.0,1.0,0.0,present_perfect
+He hasn't played the piano yet,0.0,1.0,0.0,present_perfect
+Have you invited any of your friends? ,0.0,0.0,1.0,present_perfect
+Has she studied hard enough?,0.0,0.0,1.0,present_perfect
+The results have been published,1.0,0.0,0.0,present_perfect
+I have done it!,1.0,0.0,0.0,present_perfect
+She hasn't cleaned the house ,0.0,1.0,0.0,present_perfect
+They haven't tried yet,0.0,1.0,0.0,present_perfect
+Have we been singing for 5 years?,0.0,0.0,1.0,present_perfect
+Have I been so mean before? ,0.0,0.0,1.0,present_perfect
+I have already done my homework,1.0,0.0,0.0,present_perfect
+our teacher has fallen ill,1.0,0.0,0.0,present_perfect
+he hasn't chosen this way,0.0,1.0,0.0,present_perfect
+they haven't fiished the task yet,0.0,1.0,0.0,present_perfect
+Have you ever been to Australia?,0.0,0.0,1.0,present_perfect
+Has he flied before? ,0.0,0.0,1.0,present_perfect
+I have been to Paris,1.0,0.0,0.0,present_perfect
+People have walked on the moon,1.0,0.0,0.0,present_perfect
+I haven't killed anyone,0.0,1.0,0.0,present_perfect
+She hasn't bought anything,0.0,1.0,0.0,present_perfect
+Has he studied Latin?,0.0,0.0,1.0,present_perfect
+Have they been there before? ,0.0,0.0,1.0,present_perfect
+I've studied Spanish since childhood,1.0,0.0,0.0,present_perfect
+I have seen that movie twenty times,1.0,0.0,0.0,present_perfect
+You haven't grown since last year,0.0,1.0,0.0,present_perfect
+My English hasn't really improved,0.0,1.0,0.0,present_perfect
+Have you ever been in such places? ,0.0,0.0,1.0,present_perfect
+Has she seen a rat there? ,0.0,0.0,1.0,present_perfect
+ I have met him once before,1.0,0.0,0.0,present_perfect
+People have traveled to the Moon,1.0,0.0,0.0,present_perfect
+People haven't traveled to Mars,0.0,1.0,0.0,present_perfect
+He hasn't started yet ,0.0,1.0,0.0,present_perfect
+Have you ever met him?,0.0,0.0,1.0,present_perfect
+0,0.0,0.0,1.0,present_perfect
+"He goes to school every day
+",1.0,0.0,0.0,present_simple
+They want ice-cream,1.0,0.0,0.0,present_simple
+I live in London,1.0,0.0,0.0,present_simple
+I do not play,0.0,1.0,0.0,present_simple
+Does he speak Spanish?,0.0,0.0,1.0,present_simple
+She doesn't smoke,0.0,1.0,0.0,present_simple
+I often go to the park,1.0,0.0,0.0,present_simple
+Jim studies French,1.0,0.0,0.0,present_simple
+The airplane takes off at 2.30 p.m.,1.0,0.0,0.0,present_simple
+Do you speak English?,0.0,0.0,1.0,present_simple
+He does not speak English.,0.0,1.0,0.0,present_simple
+When does the train usually leave?,0.0,0.0,1.0,present_simple
+She does not play tennis,0.0,1.0,0.0,present_simple
+Do pigs like milk?,0.0,0.0,1.0,present_simple
+"When do we board the plane?",0.0,0.0,1.0,present_simple
+He needs help ,1.0,0.0,0.0,present_simple
+A boy does not jump,1.0,0.0,0.0,present_simple
+Does a boy jump?,0.0,0.0,1.0,present_simple
+The sun rises in the east,1.0,0.0,0.0,present_simple
+I have a modern laptop,1.0,0.0,0.0,present_simple
+She doesn't speak Italian,0.0,1.0,0.0,present_simple
+They don't buy fast food ,0.0,1.0,0.0,present_simple
+Does the souvenir shop close at 18.00?,0.0,0.0,1.0,present_simple
+Spiders don't frighten me.,0.0,1.0,0.0,present_simple
+Do you get the bus?,0.0,0.0,1.0,present_simple
+You do not write,0.0,1.0,0.0,present_simple
+I never go to the cinema,1.0,0.0,0.0,present_simple
+I love you,1.0,0.0,0.0,present_simple
+Do you think?,0.0,0.0,1.0,present_simple
+Do you like chocolate? ,0.0,0.0,1.0,present_simple
+Tom cleans the car,1.0,0.0,0.0,present_simple
+He has his passport in his hand,1.0,0.0,0.0,present_simple
+He does not need help,0.0,1.0,0.0,present_simple
+I don't like oranges,0.0,1.0,0.0,present_simple
+Do you have your passport with you?,0.0,0.0,1.0,present_simple
+Do you only speak English?,0.0,0.0,1.0,present_simple
+It drinks milk,1.0,0.0,0.0,present_simple
+Bob doesn't speak German,0.0,1.0,0.0,present_simple
+Do pigs like milk?,0.0,0.0,1.0,present_simple
+She likes hot dogs,1.0,0.0,0.0,present_simple
+I will be sad,1.0,0.0,0.0,to_be_future
+She will be 5,1.0,0.0,0.0,to_be_future
+He won't be a student,0.0,1.0,0.0,to_be_future
+They won't be married,0.0,1.0,0.0,to_be_future
+will you be a doctor?,0.0,0.0,1.0,to_be_future
+will he be teacher? ,0.0,0.0,1.0,to_be_future
+We will be happy,1.0,0.0,0.0,to_be_future
+They will be artists,1.0,0.0,0.0,to_be_future
+I won't be 9 years old,0.0,1.0,0.0,to_be_future
+They won't be there,0.0,1.0,0.0,to_be_future
+will Brad Pitt be here?,0.0,0.0,1.0,to_be_future
+" will she be there, too?",0.0,0.0,1.0,to_be_future
+I will be 27 years old,1.0,0.0,0.0,to_be_future
+You will be angry,1.0,0.0,0.0,to_be_future
+They will be brave,0.0,1.0,0.0,to_be_future
+Jim won't be at school,0.0,1.0,0.0,to_be_future
+will he be home? ,0.0,0.0,1.0,to_be_future
+will she be hot in the future?,0.0,0.0,1.0,to_be_future
+He will be a journalist,1.0,0.0,0.0,to_be_future
+I will be a sergeon ,1.0,0.0,0.0,to_be_future
+It will be good,0.0,1.0,0.0,to_be_future
+It will be here,0.0,1.0,0.0,to_be_future
+will she be clever?,0.0,0.0,1.0,to_be_future
+will we  be students?,0.0,0.0,1.0,to_be_future
+He will be married,1.0,0.0,0.0,to_be_future
+He will be sad because of that,1.0,0.0,0.0,to_be_future
+They won't be glad,0.0,1.0,0.0,to_be_future
+We won't be busy,0.0,1.0,0.0,to_be_future
+will they be happy in the end? ,0.0,0.0,1.0,to_be_future
+will he be single? ,0.0,0.0,1.0,to_be_future
+We will be ready to start ,1.0,0.0,0.0,to_be_future
+That will be mine,1.0,0.0,0.0,to_be_future
+this will not  be a garden,0.0,1.0,0.0,to_be_future
+he won't be OK,0.0,1.0,0.0,to_be_future
+will that be a car?,0.0,0.0,1.0,to_be_future
+will you be fine? ,0.0,0.0,1.0,to_be_future
+I will be fine,1.0,0.0,0.0,to_be_future
+Alice will not be crazy,0.0,1.0,0.0,to_be_future
+Will they come in time?,0.0,0.0,1.0,to_be_future
+It was John,1.0,0.0,0.0,to_be_past
+"He was from America
+",1.0,0.0,0.0,to_be_past
+She wasn't Korean,0.0,1.0,0.0,to_be_past
+He wasn't a murder,0.0,1.0,0.0,to_be_past
+Were they happy?,0.0,0.0,1.0,to_be_past
+Were you satisfied? ,0.0,0.0,1.0,to_be_past
+I was sad,1.0,0.0,0.0,to_be_past
+She was 15,1.0,0.0,0.0,to_be_past
+He wasn't a student,0.0,1.0,0.0,to_be_past
+They weren't married,0.0,1.0,0.0,to_be_past
+Were you a doctor?,0.0,0.0,1.0,to_be_past
+Was he a teacher? ,0.0,0.0,1.0,to_be_past
+We were happy,1.0,0.0,0.0,to_be_past
+They were artists,1.0,0.0,0.0,to_be_past
+I wasn't hungry,0.0,1.0,0.0,to_be_past
+They weren't upset.,0.0,1.0,0.0,to_be_past
+Was she in England? ,0.0,0.0,1.0,to_be_past
+Were they there last night? ,0.0,0.0,1.0,to_be_past
+I was 27 years old,1.0,0.0,0.0,to_be_past
+You were angry,1.0,0.0,0.0,to_be_past
+We weren't tired last light,0.0,1.0,0.0,to_be_past
+They weren't angry at you,0.0,1.0,0.0,to_be_past
+Was the weather bad yesterday?,0.0,0.0,1.0,to_be_past
+Was he at the party last night? ,0.0,0.0,1.0,to_be_past
+He was a journalist,1.0,0.0,0.0,to_be_past
+I was happy,1.0,0.0,0.0,to_be_past
+she wasn't my best friend,0.0,1.0,0.0,to_be_past
+we weren't very fast runners,0.0,1.0,0.0,to_be_past
+was she skinny?,0.0,0.0,1.0,to_be_past
+was he outgoing?,0.0,0.0,1.0,to_be_past
+It was big,1.0,0.0,0.0,to_be_past
+You were my friend,1.0,0.0,0.0,to_be_past
+She wasn't that shy,0.0,1.0,0.0,to_be_past
+They weren't guilty,0.0,1.0,0.0,to_be_past
+Were you talkative at the party?,0.0,0.0,1.0,to_be_past
+They were Egyptian,1.0,0.0,0.0,to_be_past
+My mum was a doctor,1.0,0.0,0.0,to_be_past
+He wasn't happy about it,0.0,1.0,0.0,to_be_past
+They weren't strong enough,0.0,1.0,0.0,to_be_past
+Were you fit? ,0.0,0.0,1.0,to_be_past
+Was I a bright student? ,0.0,0.0,1.0,to_be_past
+I'm Joanna,1.0,0.0,0.0,to_be_present
+"I'm American
+",1.0,0.0,0.0,to_be_present
+She's not Korean,0.0,1.0,0.0,to_be_present
+He isn't Italian,0.0,1.0,0.0,to_be_present
+Are they from Australia?,0.0,0.0,1.0,to_be_present
+Are you sad? ,0.0,0.0,1.0,to_be_present
+I'm sad,1.0,0.0,0.0,to_be_present
+She's 15,1.0,0.0,0.0,to_be_present
+He isn't a student,0.0,1.0,0.0,to_be_present
+They aren't married,0.0,1.0,0.0,to_be_present
+Are you a doctor?,0.0,0.0,1.0,to_be_present
+Is he a teacher? ,0.0,0.0,1.0,to_be_present
+We're happy,1.0,0.0,0.0,to_be_present
+They're artists,1.0,0.0,0.0,to_be_present
+I'm not 9 years old!,0.0,1.0,0.0,to_be_present
+They aren't English,0.0,1.0,0.0,to_be_present
+Is Brad Pitt French?,0.0,0.0,1.0,to_be_present
+" Is she American, too?",0.0,0.0,1.0,to_be_present
+I'm 27 years old,1.0,0.0,0.0,to_be_present
+You're angry,1.0,0.0,0.0,to_be_present
+They aren't brave,0.0,1.0,0.0,to_be_present
+Jim isn't here,0.0,1.0,0.0,to_be_present
+Is he at home? ,0.0,0.0,1.0,to_be_present
+Are they hot?,0.0,0.0,1.0,to_be_present
+He's a journalist,1.0,0.0,0.0,to_be_present
+I am a sergeon ,1.0,0.0,0.0,to_be_present
+It isn't good,0.0,1.0,0.0,to_be_present
+It isn't here,0.0,1.0,0.0,to_be_present
+Is she clever?,0.0,0.0,1.0,to_be_present
+Are we students?,0.0,0.0,1.0,to_be_present
+You are a doctor,1.0,0.0,0.0,to_be_present
+He's married,1.0,0.0,0.0,to_be_present
+They aren't glad,0.0,1.0,0.0,to_be_present
+We aren't busy,0.0,1.0,0.0,to_be_present
+Is he single? ,0.0,0.0,1.0,to_be_present
+We are ready to start ,1.0,0.0,0.0,to_be_present
+That is a ball,1.0,1.0,0.0,to_be_present
+this is not a phone,0.0,1.0,0.0,to_be_present
+he isn't OK,0.0,1.0,0.0,to_be_present
+Is that a car?,0.0,0.0,1.0,to_be_present
+are you fine? ,0.0,0.0,1.0,to_be_present
+I used to drink coffee every morning,1.0,0.0,0.0,used_to
+She used to live in London,1.0,0.0,0.0,used_to
+I didn't use to smoke,0.0,1.0,0.0,used_to
+I didn't use to ride a bike to school,0.0,1.0,0.0,used_to
+Did you use to ride a bike to school?,0.0,0.0,1.0,used_to
+Did you use to work with Kevin Harris?,0.0,0.0,1.0,used_to
+He used to play football professionally ,1.0,0.0,0.0,used_to
+ I used to ride a bike to school every day,1.0,0.0,0.0,used_to
+I didn't use to like her,0.0,1.0,0.0,used_to
+It didn't use to be so crowded in the shops ,0.0,1.0,0.0,used_to
+Did she used to live in the same street as us?,0.0,0.0,1.0,used_to
+Did you play the piano?,0.0,0.0,1.0,used_to
+I used to like her,1.0,0.0,0.0,used_to
+You used to play the piano,1.0,0.0,0.0,used_to
+I didn't used to like broccoli ,0.0,1.0,0.0,used_to
+They didn't use to kill birds,0.0,1.0,0.0,used_to
+DId you use to be here? ,0.0,0.0,1.0,used_to
+Did they use to have a car? ,0.0,0.0,1.0,used_to
+She used not to live as poorly ,1.0,0.0,0.0,used_to
+He used to live in London,1.0,0.0,0.0,used_to
+Jeremy didn't use to buy so much food,0.0,1.0,0.0,used_to
+He didn't use to bring flashcards,0.0,1.0,0.0,used_to
+Did they use to need so much money? ,0.0,0.0,1.0,used_to
+Did you use to like that cat? ,0.0,0.0,1.0,used_to
+Jerry used to study English,1.0,0.0,0.0,used_to
+Christine used to eat meat,1.0,0.0,0.0,used_to
+I didn't use to have a bike,0.0,1.0,0.0,used_to
+John didn't use to fly so much ,0.0,1.0,0.0,used_to
+Did you use to have so many candies? ,0.0,0.0,1.0,used_to
+Did Molly use to buy coffee every day? ,0.0,0.0,1.0,used_to
+I used to live in Paris,1.0,0.0,0.0,used_to
+Sarah used to be fat,1.0,0.0,0.0,used_to
+Kenny didn't use to be so angry,0.0,1.0,0.0,used_to
+They didn't use to turn so much light ,0.0,1.0,0.0,used_to
+Did he use to drive a car?,0.0,0.0,1.0,used_to
+Did I use to drink so much? ,0.0,0.0,1.0,used_to
+George used to be the best student in class,1.0,0.0,0.0,used_to
+Cartman used to like one girl,1.0,0.0,0.0,used_to
+Nelly didn't use to forget everything,0.0,1.0,0.0,used_to
+Ben didn't use to be active at school ,0.0,1.0,0.0,used_to
+Did they use to listen music before? ,0.0,0.0,1.0,used_to
+Did she use to play any instruments? ,0.0,0.0,1.0,used_to
